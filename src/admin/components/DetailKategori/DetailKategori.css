@@ -1,0 +1,218 @@
+.icon{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.backIcon{
+    color: black;
+    font-size: 50px;
+}
+
+.containerTampilanNama{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.nama > input{
+    width: 700px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.nama > h2{
+    text-transform: capitalize;
+    font-size: 30px;
+}
+
+.btnDetailKategori{
+    display: flex;
+    gap: 20px;
+    margin-left: 500px;
+    cursor: pointer;
+}
+
+.DetailKategoriCtaEdit{
+    width: 100px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: transparent;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.DetailKategoriCtaHapus{
+    width: 100px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: transparent;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+
+}
+
+.DetailKategoriCtaHapus:hover {
+    background-color: #ED2B2A;
+    color: white;
+}
+
+.DetailKategoriCtaEdit:hover{
+    background-color: #F7A300;
+    color: white;
+}
+
+.DetailKategoriBottom{
+    margin-bottom: 150px;
+}
+
+
+
+/* responsive tablet */
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+    .icon{
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+        margin-top: 30px;
+        align-items: center;
+    }
+    
+    .backIcon{
+        color: black;
+        font-size: 50px;
+    }
+    
+    .containerTampilanNama{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .nama > input{
+        width: 400px;
+        height: 40px;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+    
+    .nama > h2{
+        text-transform: capitalize;
+        font-size: 30px;
+    }
+
+    .btnDetailKategori{
+        display: flex;
+        gap: 20px;
+        margin-left: 200px;
+        cursor: pointer;
+    }
+    
+    .DetailKategoriCtaEdit{
+        width: 100px;
+        height: 35px;
+        border: 2px solid black;
+        background-color: transparent;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease-out;
+    }
+    
+    .DetailKategoriCtaHapus{
+        width: 100px;
+        height: 35px;
+        border: 2px solid black;
+        background-color: transparent;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease-out;
+    
+    }
+    
+    .DetailKategoriBottom{
+        margin-bottom: 150px;
+    }
+}
+
+/* Responsive HP */
+@media screen and (min-width: 320px) and (max-width: 500px) {
+    .icon{
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+        margin-top: 30px;
+        align-items: center;
+    }
+    
+    .backIcon{
+        color: black;
+        font-size: 50px;
+    }
+    
+    .containerTampilanNama{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .nama > input{
+        width: 300px;
+        height: 40px;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+    
+    .nama > h2{
+        text-transform: capitalize;
+        font-size: 30px;
+    }
+
+    .btnDetailKategori{
+        display: flex;
+        gap: 20px;
+        margin-left: 120px;
+        cursor: pointer;
+    }
+    
+    .DetailKategoriCtaEdit{
+        width: 90px;
+        height: 35px;
+        border: 2px solid black;
+        background-color: transparent;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease-out;
+    }
+    
+    .DetailKategoriCtaHapus{
+        width: 90px;
+        height: 35px;
+        border: 2px solid black;
+        background-color: transparent;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease-out;
+    
+    }
+    
+    .DetailKategoriBottom{
+        margin-bottom: 150px;
+    }
+}

@@ -1,0 +1,178 @@
+.containerAddUser{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.inputTypeInCreateUser{
+    width: 350px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.gambarCreateUser{
+    height: 350px;
+}
+
+.judulInputCreateAkun{
+    margin: 20px 0px 0px 0px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.createUserCTA{
+    display: flex;
+    margin: 50px 0px 0px 0px;
+    justify-content: center;
+    gap: 30px;
+}
+
+.createUserCTA > button {
+    width: 100px;
+    cursor: pointer;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.deleteCreateUser{
+    width: 100px;
+    cursor: pointer;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.tambahkanCreateUser:hover{
+    background-color: #F7A300;
+    color: white;
+    transition: all 0.1s ease-in-out;
+}
+
+    .deleteCreateUser:hover{
+    background-color: #CB3506;
+    color: white;
+    transition: all 0.1s ease-in-out;
+}
+
+
+/* responsive tablet */
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+    .containerAddUser{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+    
+    .inputTypeInCreateUser{
+        width: 350px;
+        height: 35px;
+        border: 2px solid black;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+    
+    .gambarCreateUser{
+        height: 350px;
+    }
+    
+    .judulInputCreateAkun{
+        margin: 20px 0px 0px 0px;
+        font-weight: 500;
+        text-transform: capitalize;
+        font-size: 20px;
+    }
+    
+    .createUserCTA{
+        display: flex;
+        margin: 50px 0px 0px 0px;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .createUserCTA > button {
+        width: 100px;
+        cursor: pointer;
+        height: 50px;
+        border: 2px solid black;
+        border-radius: 10px;
+        background-color: transparent;
+        font-weight: bold;
+    }
+    
+    .createUserCTA > .tambahkanCreateUser:hover{
+        background-color: #F7A300;
+        color: white;
+        transition: all 0.1s ease-in-out;
+    }
+    
+    .createUserCTA > .deleteCreateUser:hover{
+        background-color: #CB3506;
+        color: white;
+        transition: all 0.1s ease-in-out;
+    }
+}
+
+/* Responsive HP */
+@media screen and (min-width: 320px) and (max-width: 500px) {
+    .containerAddUser{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .inputTypeInCreateUser{
+        width: 350px;
+        height: 35px;
+        border: 2px solid black;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+    
+    .gambarCreateUser{
+        height: 250px;
+    }
+    
+    .judulInputCreateAkun{
+        margin: 20px 0px 0px 0px;
+        font-weight: 500;
+        text-transform: capitalize;
+        font-size: 20px;
+    }
+    
+    .createUserCTA{
+        display: flex;
+        margin: 50px 0px 0px 0px;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .createUserCTA > button {
+        width: 100px;
+        cursor: pointer;
+        height: 50px;
+        border: 2px solid black;
+        border-radius: 10px;
+        background-color: transparent;
+        font-weight: bold;
+    }
+    
+    .createUserCTA > .tambahkanCreateUser:hover{
+        background-color: #F7A300;
+        color: white;
+        transition: all 0.1s ease-in-out;
+    }
+    
+    .createUserCTA > .deleteCreateUser:hover{
+        background-color: #CB3506;
+        color: white;
+        transition: all 0.1s ease-in-out;
+    }
+}

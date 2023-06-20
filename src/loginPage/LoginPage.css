@@ -1,0 +1,214 @@
+
+.LoginPage{
+  background-color: #F7A300;
+  display: flex;
+  justify-content: space-between;
+}
+
+.LoginPageContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.LoginPageCashyLogo{
+  width: 400px;
+}
+
+.LoginPageContainer > h1{
+  padding: 0px 0px 0px 50px;
+  width: 500px;
+  font-size: 48px;
+  margin: 0px;
+}
+
+.LoginPageContainerInput{
+  background-color: white;
+  width: 750px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px 0px 0px 50px;
+  align-items: center;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.LoginPageMobile{
+  height: 230px;
+}
+
+.inputUser > h1{
+  font-size: 20px;
+  margin: 0px;
+}
+
+.inputUser > input{
+  width: 400px;
+  height: 20px;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid black;
+}
+
+.LoginPageBottom{
+  margin-bottom:100px;
+}
+
+.loginCTA > button{
+  width: 350px;
+  height: 30px;
+  font-weight: bold;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.loginCTA > button:hover{
+  background-color: #F7A300;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid black;
+  color: white;
+}
+
+/* responsive tablet */
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+  .LoginPage{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: unset;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .LoginPageContainer{
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .LoginPageCashyLogo{
+    width: 400px;
+  }
+  
+  .LoginPageContainer > h1{
+    padding: unset;
+    width: 350px;
+    font-size: 48px;
+    margin-top:50px;
+  }
+  
+  .LoginPageContainerInput{
+    background-color: white;
+    width: 800px;
+    height: 630px;
+    display: flex;
+    justify-content: unset;
+    border-radius: 20px 20px 20px 20px;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  
+  .LoginPageMobile{
+    height: 250px;
+    margin-top: 30px;
+  }
+  
+  .inputUser > h1{
+    font-size: 20px;
+    margin: 0px;
+  }
+  
+  .inputUser > input{
+    width: 300px;
+    height: 20px;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid black;
+  }  
+  
+  .loginCTA > button{
+    width: 250px;
+    height: 30px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+
+/* Responsive HP */
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .LoginPage{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: unset;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .LoginPageContainer{
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .LoginPageCashyLogo{
+    width: 250px;
+  }
+  
+  .LoginPageContainer > h1{
+    padding: unset;
+    width: 300px;
+    font-size: 30px;
+    margin-top:50px;
+  }
+  
+  .LoginPageContainerInput{
+    background-color: white;
+    width: 350px;
+    height: 620px;
+    display: flex;
+    justify-content: unset;
+    border-radius: 20px 20px 20px 20px;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  
+  .LoginPageMobile{
+    height: 250px;
+    margin-top: 30px;
+  }
+  
+  .inputUser > h1{
+    font-size: 20px;
+    margin: 0px;
+  }
+  
+  .inputUser > input{
+    width: 300px;
+    height: 20px;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid black;
+  }
+
+  .loginCTA > button{
+    width: 150px;
+    height: 30px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}

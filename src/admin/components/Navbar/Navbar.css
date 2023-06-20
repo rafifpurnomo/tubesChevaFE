@@ -1,0 +1,100 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    font-weight: bold;
+    background-color: #F7A300;
+}
+
+.judul{
+    margin: 0px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.list{
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.list > a{
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+}
+
+a li:hover{
+    color: white;
+}
+
+a li:after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    display: block;
+    transition: all 0.2s ease-in-out;
+
+}
+
+a li:hover::after {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+/* Responsive HP */
+@media screen and (min-width: 320px) and (max-width: 500px) {
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        justify-content: space-between;
+        font-weight: bold;
+        background-color: #F7A300;
+    }
+    
+    .judul{
+        margin: 0px;
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+    
+    .list{
+        display: flex;
+        text-decoration: none;
+        list-style-type: none;
+        gap: 20px;
+        font-size: 20px;
+        padding: 0px;
+    }
+    
+    .list > a{
+        text-decoration: none;
+        color: black;
+        text-transform: capitalize;
+    }
+    
+    a li:hover{
+        color: white;
+    }
+    
+    a li:after{
+        content: "";
+        width: 0%;
+        height: 2px;
+        display: block;
+        transition: all 0.2s ease-in-out;
+    
+    }
+    
+    a li:hover::after {
+        width: 100%;
+        height: 2px;
+        background-color: white;
+    }
+}

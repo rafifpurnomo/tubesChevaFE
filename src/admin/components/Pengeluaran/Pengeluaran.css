@@ -1,0 +1,144 @@
+.addIcon{
+    font-size: 50px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 50px 50px 0px 0px;
+}
+
+.addIcon > a{
+    color: black;
+}
+
+.pengeluaranJudul{
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0px;
+    font-size: 35px;
+}
+
+.containerTampilan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0px 100px 0px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.tampilanDataPengeluaran{
+    display: flex;
+    height: 150px;
+    width: 320px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #FCD770;
+    color: black;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.tampilanDataPengeluaran:hover{
+    transition: all .2s ease-in-out;
+    transform: scale(1.1);
+}
+
+.kategoriTable > .kategoriTr{
+    border-collapse: none;
+}
+
+/* responsive tablet */
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+    .addIcon{
+        font-size: 50px;
+        display: flex;
+        justify-content: flex-end;
+        padding: 50px 50px 0px 0px;
+    }
+    
+    .addIcon > a{
+        color: black;
+    }
+
+    .pengeluaranJudul{
+        text-align: center;
+        text-transform: capitalize;
+        margin: 0px;
+        font-size: 35px;
+    }
+    
+    .containerTampilan{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 50px 0px 100px 0px;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    .tampilanDataPengeluaran{
+        justify-content: center;
+        height: 100px;
+        margin: unset;
+        width: 210px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #FCD770;
+        color: black;
+        font-size: 15px;
+        text-transform: capitalize;
+        font-weight: 500;
+        text-decoration: none;
+    }
+}
+
+/* Responsive HP */
+@media screen and (min-width: 320px) and (max-width: 500px) {
+    .addIcon{
+        font-size: 50px;
+        color: black;
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px 50px 0px 0px;
+    }
+
+    .judulPengeluaran{
+        display: flex;
+        justify-content: center;
+    }
+
+    .pengeluaranJudul{
+        text-align: center;
+        text-transform: capitalize;
+        margin: 0px 0px 5px 0px;
+        font-size: 25px;
+        width: 250px;
+    }
+    
+    .containerTampilan{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0px 50px 0px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .tampilanDataPengeluaran{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: unset;
+        height: 90px;
+        width: 250px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #FCD770;
+        color: black;
+        font-size: 15px;    
+        text-transform: capitalize;
+        font-weight: 500;
+        text-decoration: none;
+    }    
+}
