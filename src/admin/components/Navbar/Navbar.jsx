@@ -1,7 +1,6 @@
 import React from 'react';
 import './Navbar.css';
  
-
 function Navbar() {
   return (
     <div>
@@ -10,7 +9,7 @@ function Navbar() {
             <ul className='list'>
                 <a href="/"><li>home</li></a>
                 <a href=""><li>income</li></a>
-                <a href=""><li>profile</li></a>
+                <a href="/Profile"><li>profile</li></a>
             </ul>
         </nav>
     </div>

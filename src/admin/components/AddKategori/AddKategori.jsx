@@ -48,7 +48,7 @@ function AddKategori() {
             Tambahkan
           </button>
         </div>
-        <div className="DetailKategoriBottom"></div>
+        <div className="AddKategoriBottom"></div>
       </div>
     </div>
   );

@@ -6,8 +6,9 @@ import axios from "axios";
 
 function DetailKategori() {
   const { index } = useParams();
-  var [nama, setNama] = useState("");
+  var [status, setStatus] = useState("");
   var [kategori, setKategori] = useState("");
+  var [deskripsi, setDeskripsi] = useState("");
 
   const [dataKategori, setDataKategori] = useState([]);
   const [data, setData] = useState({});
@@ -27,30 +28,28 @@ function DetailKategori() {
   useEffect(() => {
     if (dataKategori.length > 0) {
       setData(dataKategori[index]);
-      setNama(data.nama);
+      setStatus(data.status);
       setKategori(data.kategori);
+      setDeskripsi(data.deskripsi);
     }
   }, [dataKategori, index]);
 
   return (
     <div>
-      <div className="icon">
-        <a href="/Kategori" className="backIcon">
-          <Icon icon="ion:arrow-back" />
-        </a>
+      <div className="detailContainerBack">
+        <p className="detailContainerBackJudul">
+          <a href="/">Homepage / </a>
+          <span>
+            <a href="/Kategori">Kategori / </a>
+          </span>
+          <span>
+            <a href="">edit kategori</a>
+          </span>
+        </p>
       </div>
+
       <div className="containerTampilanNama">
-        <div className="nama">
-          <h2>nama</h2>
-          <input
-            type="text"
-            onChange={(e) => {
-              setNama(e.target.value);
-            }}
-            value={nama}
-          />
-        </div>
-        <div className="nama">
+        <div className="judulDetailKategori">
           <h2>kategori</h2>
           <input
             type="text"
@@ -60,19 +59,43 @@ function DetailKategori() {
             value={kategori}
           />
         </div>
-        <div className="btnDetailKategori">
-          <button
-            className="DetailKategoriCtaHapus"
-            onClick={(e) => {
-              hapusDataKategori(index);
+        <div className="judulDetailKategori">
+          <h2>status</h2>
+          <select
+            name="statusKategoriUpdate"
+            id="statusKategoriUpdate"
+            className="statusKategoriUpdate"
+            onChange={(e) => {
+              setStatus(e.target.value);
             }}
+            value={status}
           >
-            hapus
-          </button>
+            <option value=""></option>
+            <option value="sudah">sudah</option>
+            <option value="belum">belum</option>
+          </select>
+        </div>
+        <div className="judulDetailKategori">
+          <h2>deskripsi kategori</h2>
+          <textarea
+            name="deskripsiKategori"
+            id="deskripsiKategori"
+            cols="65"
+            rows="5"
+            onChange={(e) => {
+              setDeskripsi(e.target.value);
+            }}
+            value={deskripsi}
+          ></textarea>
+        </div>
+        <div className="btnDetailKategori">
+          <a href="/Kategori">
+            <button className="DetailKategoriCtaCancel">cancel</button>
+          </a>
           <button
             className="DetailKategoriCtaEdit"
             onClick={(e) => {
-              editDataKategori(index, nama, kategori);
+              editDataKategori(index, kategori, status, deskripsi);
             }}
           >
             edit
@@ -84,14 +107,15 @@ function DetailKategori() {
   );
 }
 
-function editDataKategori(index, nama, kategori) {
+function editDataKategori(index, kategori, status, deskripsi) {
   axios
     .post(
       "http://localhost:3000/editkategori",
       {
         index: index,
-        nama: nama,
         kategori: kategori,
+        status: status,
+        deskripsi: deskripsi,
       },
       {
         headers: {
@@ -100,7 +124,7 @@ function editDataKategori(index, nama, kategori) {
       }
     )
     .then((response) => {
-      alert(response.data["message"])
+      alert(response.data["message"]);
       window.location.assign("/Kategori");
     })
     .catch((error) => {
@@ -110,28 +134,6 @@ function editDataKategori(index, nama, kategori) {
         alert("Error: " + error.message);
       }
     });
-}
-
-function hapusDataKategori(index) {
-  axios
-  .post(
-    "http://localhost:3000/hapuskategori",
-    {
-      index: index,
-    },
-    {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  )
-  .then((response) => {
-    alert(response.data["message"]);
-    window.location.assign("/Kategori");
-  })
-  .catch((error) => {
-    alert(error);
-  });
 }
 
 export default DetailKategori;

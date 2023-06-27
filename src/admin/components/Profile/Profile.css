@@ -1,0 +1,10 @@
+.adminLogoutCTA{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.logoutAdminCTA{
+    width: 200px;
+    height: 50px;
+}

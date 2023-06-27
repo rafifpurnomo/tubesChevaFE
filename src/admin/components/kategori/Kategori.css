@@ -1,119 +1,266 @@
-.addIcon{
-    font-size: 50px;
-    display: flex;
-    justify-content: flex-end;
-    padding: 50px 50px 0px 0px;
+.addIconKategoriContainer {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 30px 0px 30px;
 }
 
-.addIcon > a{
-    color: black;
+.addIconKategoriJudul {
+  font-size: 18px;
 }
 
-.containerTampilan{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 50px 0px 100px 0px;
-    flex-wrap: wrap;
-    gap: 30px;
+.addKategoriLink {
+  text-decoration: none;
 }
 
-.tampilanData{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    width: 200px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #FCD770;
-    color: black;
-    font-size: 20px;
-    text-align: center;
-    text-transform: capitalize;
-    font-weight: 500;
-    text-decoration: none;
+.btnAddKategori {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 200px;
+  justify-content: center;
+  border-radius: 8px;
+  border: 2px transparent;
+  background-color: #3b8c15;
+  cursor: pointer;
 }
 
-.tampilanData:hover{
-    transition: all .2s ease-in-out;
-    transform: scale(1.1);
+.addKategoriIcon {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
 }
 
-/* responsive tablet */
-@media screen and (min-width: 500px) and (max-width: 1024px) {
-    .addIcon{
-        font-size: 50px;
-        display: flex;
-        justify-content: flex-end;
-        padding: 50px 50px 0px 0px;
-    }
-    
-    .addIcon > a{
-        color: black;
-    }
-    
-    .containerTampilan{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 50px 0px 100px 0px;
-        flex-wrap: wrap;
-        gap: 30px;
-    }
-    
-    .tampilanData{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100px;
-        width: 200px;
-        padding: 20px;
-        border-radius: 10px;
-        background-color: #FCD770;
-        color: black;
-        font-size: 20px;
-        text-align: center;
-        text-transform: capitalize;
-        font-weight: 500;
-        text-decoration: none;
-    }
+.addIconKategoriTxt {
+  color: white;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.containerTampilanKategori {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 50px 0px 0px 30px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tampilDataContainer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.ctaEditDelKategori {
+  display: flex;
+  gap: 20px;
+}
+
+.ctaEditKategori {
+  height: 80px;
+  width: 80px;
+  font-size: 50px;
+  border: 2px transparent;
+  border-radius: 8px;
+  background-color: #0086d2;
+  color: white;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctaEditKategori:hover {
+  transform: scale(1.1);
+}
+
+.ctaDelKategori {
+  height: 80px;
+  width: 80px;
+  font-size: 50px;
+  border: 2px transparent;
+  border-radius: 8px;
+  background-color: #b32b2b;
+  color: white;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctaDelKategori:hover {
+  transform: scale(1.1);
+}
+
+.tampilanData {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 540px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fcd770;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  text-decoration: none;
+  justify-content: space-between;
+}
+
+.statusKategori {
+  width: 120px;
+  height: 30px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: green;
+  border: 2px solid transparent;
+  border-radius: 10px;
 }
 
 /* Responsive HP */
 @media screen and (min-width: 320px) and (max-width: 500px) {
-    .addIcon{
-        font-size: 50px;
-        color: black;
-        display: flex;
-        justify-content: flex-end;
-        padding: 20px 50px 0px 0px;
-    }
-    
-    .containerTampilan{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 20px 0px 50px 0px;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-    
-    .tampilanData{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: unset;
-        height: 80px;
-        width: 90px;
-        padding: 10px;
-        border-radius: 10px;
-        background-color: #FCD770;
-        color: black;
-        font-size: 12px;
-        text-align: center;
-        text-transform: capitalize;
-        font-weight: 500;
-        text-decoration: none;
-    }    
+  .addIconKategoriContainer {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 10px 0px 10px;
+  }
+
+  .addIconKategoriJudul {
+    font-size: 15px;
+  }
+
+  .addKategoriLink {
+    text-decoration: none;
+  }
+
+  .btnAddKategori {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 175px;
+    height: 50px;
+    justify-content: center;
+    border-radius: 8px;
+    border: 2px transparent;
+    background-color: #3b8c15;
+    cursor: pointer;
+  }
+
+  .addKategoriIcon {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  .addIconKategoriTxt {
+    color: white;
+    font-size: 18px;
+    margin: 0px;
+    text-transform: capitalize;
+  }
+
+  .containerTampilanKategori {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px 10px 0px 10px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .tampilDataContainer {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  .ctaEditDelKategori {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+
+  .ctaEditKategori {
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    border: 2px transparent;
+    border-radius: 8px;
+    background-color: #0086d2;
+    color: white;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+  }
+
+  .ctaEditKategori:hover {
+    transform: scale(1.1);
+  }
+
+  .ctaDelKategori {
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    border: 2px transparent;
+    border-radius: 8px;
+    background-color: #b32b2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+    display: flex;
+    align-items: center;
+  }
+
+  .ctaDelKategori:hover {
+    transform: scale(1.1);
+  }
+
+  .tampilanData {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 330px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fcd770;
+    color: black;
+    font-size: 20px;
+    text-align: unset;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-decoration: none;
+    justify-content: space-between;
+  }
+
+  .namaKategori {
+    width: 170px;
+  }
+
+  .statusKategori {
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: green;
+    border: 2px solid transparent;
+    border-radius: 10px;
+  }
 }

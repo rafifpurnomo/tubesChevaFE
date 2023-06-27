@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { createBrowserRouter, Router, RouterProvider, Routes, useNavigate } from "react-router-dom";
 import Admin from "../admin/Admin";
 import "./LoginPage.css";
 
@@ -10,15 +9,19 @@ function LoginPage() {
   const [nama, setNama] = useState("");
   const [nim, setNim] = useState("");
   const [password, setPassword] = useState("");
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
   const [role, setRole] = useState("");
-  const navigate = useNavigate()
 
   useEffect(() => {
-    if (loggedIn && role === 'admin') {
-      navigate('/admin'); 
+    // Cek apakah pengguna sudah login sebelumnya
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    const userRole = localStorage.getItem("userRole");
+
+    if (isLoggedIn && isLoggedIn === "true" && userRole) {
+      setLoggedIn(true);
+      setRole(userRole);
     }
-  }, [loggedIn, role, navigate]);
+  }, []);
 
   const handleLogin = () => {
     if (nama && nim && password) {
@@ -31,14 +34,16 @@ function LoginPage() {
         .then((response) => {
           const role = response.data.role;
           if (role === "admin") {
-            console.log("Pengguna adalah admin");
             setRole("admin");
+            localStorage.setItem("isLoggedIn", "true");
+            localStorage.setItem("userRole", "admin");
           } else if (role === "mahasiswa") {
-            console.log("Pengguna adalah mahasiswa");
             setRole("mahasiswa");
+            localStorage.setItem("isLoggedIn", "true");
+            localStorage.setItem("userRole", "mahasiswa");
           } else {
-            console.log("Peran tidak valid");
             setRole("");
+            setLoggedIn(false)
           }
           setLoggedIn(true);
         })
@@ -50,7 +55,10 @@ function LoginPage() {
     }
   };
 
-
+  if (loggedIn && role === "admin") {
+    return  <Admin/>;
+    // return <Navigate to="/admin" replace={true}/>;
+  }
   return (
     <div>
       <div className="LoginPage">

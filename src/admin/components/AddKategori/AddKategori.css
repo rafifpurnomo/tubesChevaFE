@@ -73,7 +73,7 @@
     border: transparent;
 }
 
-.DetailKategoriBottom{
+.AddKategoriBottom{
     margin-bottom: 150px;
 }
 
@@ -126,7 +126,7 @@
         font-weight: bold;
     }
     
-    .DetailKategoriBottom{
+    .AddKategoriBottom{
         margin-bottom: 150px;
     }
 }
@@ -180,7 +180,7 @@
         font-weight: bold;
     }
     
-    .DetailKategoriBottom{
+    .AddKategoriBottom{
         margin-bottom: 150px;
     }
 }
