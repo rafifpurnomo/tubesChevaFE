@@ -13,6 +13,7 @@ import AddCreateUser from "./components/AddCreateUser/AddCreateUser";
 import DetailUser from "./components/DetailUser/DetailUser";
 import Profile from "./components/Profile/Profile";
 import LoginPage from "../loginPage/LoginPage";
+import Footer from "./components/footer/Footer";
 
 function Admin() {
   return (
@@ -37,6 +38,7 @@ function Admin() {
           <Route path="/Profile" element={<Profile/>} />
         </Routes>
       </Router>
+      <Footer/>
     </div>
   );
 }

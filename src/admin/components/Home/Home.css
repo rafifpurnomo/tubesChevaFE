@@ -48,51 +48,6 @@
   margin-top: 30px;
 }
 
-footer {
-  margin-top: 300px;
-  height: 300px;
-  background-color: #f7a300;
-  display: flex;
-  gap: 40px;
-}
-
-.alamat {
-  width: 300px;
-}
-
-.alamat > h2 {
-  text-transform: capitalize;
-  font-weight: 600;
-}
-
-.sosialMedia {
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-}
-
-.sosialMedia > h2 {
-  text-transform: capitalize;
-  font-weight: 500;
-}
-
-.brand {
-  display: flex;
-  gap: 20px;
-}
-
-.link {
-  font-size: 45px;
-  text-decoration: none;
-  color: #fcd770;
-}
-
-.link:hover {
-  color: white;
-  transition: all 0.2s ease-in-out;
-  transform: scale(1.1);
-}
-
 /* responsive tablet */
 @media screen and (min-width: 500px) and (max-width: 1024px) {
   .containerSatu {
@@ -145,57 +100,6 @@ footer {
   .kategori-foto {
     width: 50px;
     margin-top: 30px;
-  }
-
-  footer {
-    margin-top: 150px;
-    height: 100%;
-    background-color: #f7a300;
-    display: flex;
-    gap: 0px;
-    padding-left: 25px;
-    flex-direction: column;
-  }
-
-  .cashyFoto {
-    width: 300px;
-  }
-
-  .alamat {
-    width: 300px;
-  }
-
-  .alamat > h2 {
-    text-transform: capitalize;
-    font-weight: 600;
-  }
-
-  .sosialMedia {
-    display: flex;
-    gap: 0px;
-    flex-direction: column;
-  }
-
-  .sosialMedia > h2 {
-    text-transform: capitalize;
-    font-weight: 500;
-  }
-
-  .brand {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 50px;
-  }
-
-  .link {
-    font-size: 45px;
-    text-decoration: none;
-    color: #fcd770;
-  }
-
-  .link:hover {
-    color: white;
-    transition: all 0.2s ease-in-out;
   }
 }
 
@@ -251,56 +155,5 @@ footer {
   .kategori-foto {
     width: 50px;
     margin-top: 30px;
-  }
-
-  footer {
-    margin-top: 150px;
-    height: 100%;
-    background-color: #f7a300;
-    display: flex;
-    gap: 0px;
-    padding-left: 25px;
-    flex-direction: column;
-  }
-
-  .cashyFoto {
-    width: 300px;
-  }
-
-  .alamat {
-    width: 300px;
-  }
-
-  .alamat > h2 {
-    text-transform: capitalize;
-    font-weight: 600;
-  }
-
-  .sosialMedia {
-    display: flex;
-    gap: 0px;
-    flex-direction: column;
-  }
-
-  .sosialMedia > h2 {
-    text-transform: capitalize;
-    font-weight: 500;
-  }
-
-  .brand {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 50px;
-  }
-
-  .link {
-    font-size: 45px;
-    text-decoration: none;
-    color: #fcd770;
-  }
-
-  .link:hover {
-    color: white;
-    transition: all 0.2s ease-in-out;
   }
 }

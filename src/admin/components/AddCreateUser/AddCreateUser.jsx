@@ -3,6 +3,7 @@ import { Icon } from "@iconify/react";
 import "./AddCreateUser.css";
 import { useState } from "react";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 function AddCreateUser() {
   const [nama, setNama] = useState("");
@@ -12,19 +13,18 @@ function AddCreateUser() {
 
   return (
     <div>
-      <div className="icon">
-        <a href="/DataAnggota" className="backIcon">
-          <Icon icon="ion:arrow-back" />
-        </a>
+      <div className="addIconUserContainer">
+        <p className="addIconUserJudul">
+          <a href="/">Homepage / </a>
+          <span>
+            <a href="/DataAnggota">user / </a>
+          </span>
+          <span>
+            <a href="">tambah anggota</a>
+          </span>
+        </p>
       </div>
       <div className="containerAddUser">
-        <div>
-          <img
-            src="/asset/buatAkun.png"
-            alt="gambar create user"
-            className="gambarCreateUser"
-          />
-        </div>
         <div className="inputanDiCreateAkun">
           <div className="InputUserNameCreateAkun">
             <p className="judulInputCreateAkun">nama</p>
@@ -112,12 +112,23 @@ function addDataAnggota(nama, nim, divisi, password) {
       }
     )
     .then((response) => {
-      alert(response.data["message"]);
-      window.location.assign("/DataAnggota");
+      Swal.fire({
+        title: "Succes!",
+        text: "data berhasil di tambahkan",
+        icon: "success",
+        confirmButtonText: "kembali ke beranda",
+      }).then(function () {
+        window.location = "/DataAnggota";
+      });
     })
     .catch((error) => {
       if (error.response && error.response.status === 400) {
-        alert("Data belum terisi!");
+        Swal.fire({
+          title: "Error!",
+          text: "data belum terisi",
+          icon: "error",
+          confirmButtonText: "lanjutkan",
+        });
       } else {
         alert("Error: " + error.message);
       }

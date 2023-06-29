@@ -110,14 +110,7 @@ function DetailUser() {
       </div>
       <div className="createUserCTA">
         <a href="/DataAnggota">
-          <button
-            className="deleteCreateUser"
-            onClick={(e) => {
-              hapusDataAnggota(index);
-            }}
-          >
-            hapus
-          </button>
+          <button className="deleteCreateUser">hapus</button>
         </a>
         <button
           className="tambahkanCreateUser"
@@ -160,28 +153,6 @@ function editDataAnggota(index, nama, nim, divisi, password) {
       } else {
         alert("Error: " + error.message);
       }
-    });
-}
-
-function hapusDataAnggota(index) {
-  axios
-    .post(
-      "http://localhost:3000/hapususer",
-      {
-        index: index,
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    )
-    .then((response) => {
-      alert(response.data["message"]);
-      window.location.assign("/DataAnggota");
-    })
-    .catch((error) => {
-      alert(error);
     });
 }
 

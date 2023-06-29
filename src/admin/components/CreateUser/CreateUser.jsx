@@ -4,65 +4,100 @@ import { Icon } from "@iconify/react";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 function CreateUser() {
   var [data, setData] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:3000/getanggota", {
-      })
-      .then((response) => {
-        setData(response.data);
-      });
-  },[]);
-
+    axios.get("http://localhost:3000/getanggota", {}).then((response) => {
+      setData(response.data);
+    });
+  }, []);
 
   return (
     <div>
-      <h1 className="CreateUserJudul">data anggota chevalier lab</h1>
-      <div className="ctaCreateUser">
-        <a href="/AddCreateUser">
-          <button className="btnCreateUser">tambah anggota</button>
+      <div className="addIconUserContainer">
+        <p className="addIconUserJudul">
+          <a href="/">Homepage / </a>
+          <span>
+            <a href="/DataAnggota">user</a>
+          </span>
+        </p>
+        <a href="/AddCreateUser" className="addUserLink">
+          <button className="btnAddUser">
+            <Icon icon="zondicons:add-outline" className="addUserIcon" />
+            <p className="addIconUserTxt">tambah anggota</p>
+          </button>
         </a>
       </div>
-      <div className="containerCreateUser">
-        <table className="CreateUserTable">
-          <tbody>
-            <tr className="CreateUserTr">
-              <th className="CreateUserTh">nama</th>
-              <th className="CreateUserTh">nim</th>
-              <th className="CreateUserTh">divisi</th>
-            </tr>
-          </tbody>
-          {data.map((kategori, index) => {
-            return (
-              <tbody key={index}>
-                <tr className="CreateUserTr">
-                  <td className="CreateUserTd">
-                    <a href={"/DetailUser/" + index} className="CreateUserLink">
-                      {kategori.nama}
-                    </a>
-                  </td>
-                  <td className="CreateUserTd">
-                    <a href={"/DetailUser/" + index} className="CreateUserLink" >
-                      {kategori.nim}
-                    </a>
-                  </td>
-                  <td className="CreateUserTd">
-                    <a href={"/DetailUser/" + index} className="CreateUserLink" >
-                      {kategori.divisi}
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            );
-          })}
-        </table>
+      <div className="containerTampilan">
+        {data.map((kategori, index) => {
+          return (
+            <div
+              href={"/DetailPengeluaran/" + index}
+              className="tampilanDataPengeluaran"
+              key={index}
+            >
+              <div className="detailPengeluaranNominalTitle">
+                <div className="namaNimUser">
+                  <span>{kategori.nama}</span>
+                  <span className="nimUser">{kategori.nim}</span>
+                </div>
+                <div className="divisiUser">
+                  <span>{kategori.divisi}</span>
+                </div>
+              </div>
+              <div className="ctaEditDelPengeluaran">
+                <a href={"/DetailPengeluaran/" + index}>
+                  <button className="ctaEditPengeluaran">
+                    <Icon icon="bx:edit" />
+                  </button>
+                </a>
+                <button
+                  className="ctaDelPengeluaran"
+                  onClick={(e) => {
+                    hapusDataAnggota(index);
+                  }}
+                >
+                  <Icon icon="material-symbols:delete-outline" />
+                </button>
+              </div>
+            </div>
+          );
+        })}
       </div>
-      <div className="DetailKategoriBottom"></div>
+      <div className="createUserBottom "></div>
     </div>
   );
+}
+
+function hapusDataAnggota(index) {
+  axios
+    .post(
+      "http://localhost:3000/hapususer",
+      {
+        index: index,
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+    .then((response) => {
+      Swal.fire({
+        title: "Succes!",
+        text: "data berhasil di hupus",
+        icon: "success",
+        confirmButtonText: "kembali ke beranda",
+      }).then(function(){
+        window.location = '/DataAnggota'
+      })
+    })
+    .catch((error) => {
+      alert(error);
+    });
 }
 
 export default CreateUser;
