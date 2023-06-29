@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Icon } from "@iconify/react";
 import "./DetailPengeluaran.css";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 function DetailPengeluaran() {
   const { index } = useParams();
@@ -38,10 +38,16 @@ function DetailPengeluaran() {
 
   return (
     <div>
-      <div className="icon">
-        <a href="/Pengeluaran" className="backIcon">
-          <Icon icon="ion:arrow-back" />
-        </a>
+      <div className="addIconPengeluaranContainer">
+        <p className="addIconPengeluaranJudul">
+          <a href="/">Homepage / </a>
+          <span>
+            <a href="/Pengeluaran">pengeluaran / </a>
+          </span>
+          <span>
+            <a href="">detail pengeluaran</a>
+          </span>
+        </p>
       </div>
       <div className="DetailPengeluaranContainer">
         <div className="title">
@@ -94,14 +100,9 @@ function DetailPengeluaran() {
         </div>
       </div>
       <div className="DetailPengeluaranBtn">
-        <button
-          className="hapusPengeluaran"
-          onClick={(e) => {
-            hapusDataPengeluaran(index);
-          }}
-        >
-          hapus
-        </button>
+        <a href="/Pengeluaran">
+          <button className="hapusPengeluaran">Batalkan</button>
+        </a>
         <button
           className="tambahkanPengeluaran"
           onClick={(e) => {
@@ -134,37 +135,26 @@ function editDataPengeluaran(index, title, waktu, nominal, deskripsi) {
       }
     )
     .then((response) => {
-      alert(response.data["message"]);
-      window.location.assign("/Pengeluaran");
+      Swal.fire({
+        title: "Succes!",
+        text: "data berhasil di ubah",
+        icon: "success",
+        confirmButtonText: "kembali ke beranda",
+      }).then(function(){
+        window.location = '/Pengeluaran'
+      })
     })
     .catch((error) => {
       if (error.response && error.response.status === 400) {
-        alert("Data belum terisi!");
+        Swal.fire({
+          title: "Error!",
+          text: "data belum terisi",
+          icon: "error",
+          confirmButtonText: "lanjutkan",
+        });
       } else {
         alert("Error: " + error.message);
       }
-    });
-}
-
-function hapusDataPengeluaran(index) {
-  axios
-    .post(
-      "http://localhost:3000/hapuspengeluaran",
-      {
-        index: index,
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    )
-    .then((response) => {
-      alert(response.data["message"]);
-      window.location.assign("/Pengeluaran");
-    })
-    .catch((error) => {
-      alert(error);
     });
 }
 

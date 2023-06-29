@@ -1,31 +1,29 @@
 import React from "react";
 import "./AddKategori.css";
-import { Icon } from "@iconify/react";
 import axios from "axios";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 function AddKategori() {
-  const [nama, setNama] = useState("");
+  const [status, setStatus] = useState("");
   const [kategori, setKategori] = useState("");
+  const [deskripsi, setDeskripsi] = useState("");
 
   return (
     <div>
-      <div className="icon">
-        <a href="/Kategori" className="backIcon">
-          <Icon icon="ion:arrow-back" />
-        </a>
+      <div className="AddKategoriContainerBack">
+        <p className="AddKategoriContainerBackJudul">
+          <a href="/">Homepage / </a>
+          <span>
+            <a href="/Kategori">Kategori / </a>
+          </span>
+          <span>
+            <a href="">tambah kategori</a>
+          </span>
+        </p>
       </div>
       <div className="containerTampilanNama">
-        <div className="nama">
-          <h2>nama</h2>
-          <input
-            type="text"
-            onChange={(e) => {
-              setNama(e.target.value);
-            }}
-          />
-        </div>
-        <div className="nama">
+        <div className="judulAddKategori">
           <h2>kategori</h2>
           <input
             type="text"
@@ -34,15 +32,43 @@ function AddKategori() {
             }}
           />
         </div>
+        <div className="judulAddKategori">
+          <h2>status</h2>
+          <select
+            name="statusKategoriUpdate"
+            id="statusKategoriUpdate"
+            className="statusKategoriUpdate"
+            onChange={(e) => {
+              setStatus(e.target.value);
+            }}
+            value={status}
+          >
+            <option value=""></option>
+            <option value="sudah">sudah</option>
+            <option value="belum">belum</option>
+          </select>
+        </div>
+        <div className="judulAddKategori">
+          <h2>deskripsi kategori</h2>
+          <textarea
+            name="deskripsiKategori"
+            id="deskripsiKategori"
+            cols="65"
+            rows="5"
+            onChange={(e) => {
+              setDeskripsi(e.target.value);
+            }}
+            value={deskripsi}
+          ></textarea>
+        </div>
         <div className="DeleteKategoriCTA">
           <a href="/Kategori">
-          <button className="deleteKategori">Batalkan</button>
-
+            <button className="deleteKategori">Batalkan</button>
           </a>
           <button
             className="addKategori"
             onClick={(e) => {
-              addDataKategori(nama, kategori);
+              addDataKategori(kategori, status, deskripsi);
             }}
           >
             Tambahkan
@@ -54,13 +80,14 @@ function AddKategori() {
   );
 }
 
-function addDataKategori(nama, kategori) {
+function addDataKategori(kategori, status, deskripsi) {
   axios
     .post(
       "http://localhost:3000/addkategori",
       {
-        nama: nama,
         kategori: kategori,
+        status: status,
+        deskripsi: deskripsi,
       },
       {
         headers: {
@@ -69,12 +96,23 @@ function addDataKategori(nama, kategori) {
       }
     )
     .then((response) => {
-      alert(response.data["message"]);
-      window.location.assign("/Kategori");
+      Swal.fire({
+        title: "Succes!",
+        text: "data berhasil di tambahkan",
+        icon: "success",
+        confirmButtonText: "kembali ke beranda",
+      }).then(function () {
+        window.location = "/Kategori";
+      });
     })
     .catch((error) => {
       if (error.response && error.response.status === 400) {
-        alert("Data belum terisi!");
+        Swal.fire({
+          title: "Error!",
+          text: "data belum terisi",
+          icon: "error",
+          confirmButtonText: "lanjutkan",
+        });
       } else {
         alert("Error: " + error.message);
       }

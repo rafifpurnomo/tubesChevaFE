@@ -1,5 +1,4 @@
 import React from "react";
-import { Icon } from "@iconify/react";
 import "./AddPengeluaran.css";
 import { useState } from "react";
 import axios from "axios";
@@ -12,10 +11,16 @@ function DetailPengeluaran() {
 
   return (
     <div>
-      <div className="icon">
-        <a href="/Pengeluaran" className="backIcon">
-          <Icon icon="ion:arrow-back" />
-        </a>
+      <div className="addIconPengeluaranContainer">
+        <p className="addIconPengeluaranJudul">
+          <a href="/">Homepage / </a>
+          <span>
+            <a href="/Pengeluaran">pengeluaran / </a>
+          </span>
+          <span>
+            <a href="">Add pengeluaran</a>
+          </span>
+        </p>
       </div>
       <div className="DetailPengeluaranContainer">
         <div className="title">

@@ -1,144 +1,396 @@
-.addIcon{
-    font-size: 50px;
-    display: flex;
-    justify-content: flex-end;
-    padding: 50px 50px 0px 0px;
+.addIconPengeluaranContainer {
+  display: flex;
+  /* align-content: center; */
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 30px 0px 30px;
 }
 
-.addIcon > a{
-    color: black;
+.addIconPengeluaranJudul {
+  font-size: 18px;
 }
 
-.pengeluaranJudul{
-    text-align: center;
-    text-transform: capitalize;
-    margin: 0px;
-    font-size: 35px;
+.addPengeluaranLink {
+  text-decoration: none;
 }
 
-.containerTampilan{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 50px 0px 100px 0px;
-    flex-wrap: wrap;
-    gap: 30px;
+.btnAddPengeluaran {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 200px;
+  justify-content: center;
+  border-radius: 8px;
+  border: 2px transparent;
+  background-color: #3b8c15;
+  cursor: pointer;
 }
 
-.tampilanDataPengeluaran{
-    display: flex;
-    height: 150px;
-    width: 320px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #FCD770;
-    color: black;
-    font-size: 18px;
-    text-transform: capitalize;
-    font-weight: 500;
-    text-decoration: none;
+.addPengeluaranIcon {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
 }
 
-.tampilanDataPengeluaran:hover{
-    transition: all .2s ease-in-out;
-    transform: scale(1.1);
+.addIconPengeluaranTxt {
+  color: white;
+  font-size: 18px;
+  text-transform: capitalize;
 }
 
-.kategoriTable > .kategoriTr{
-    border-collapse: none;
+.containerTampilan {
+  display: flex;
+  padding: 50px 0px 0px 30px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.tampilanDataPengeluaran {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.detailPengeluaranNominalTitle {
+  display: flex;
+  height: 70px;
+  width: 970px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fcd770;
+  color: black;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 500;
+  text-decoration: none;
+  justify-content: space-between;
+}
+
+.nominalTitlePengeluaran {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tanggalPengeluaran {
+  opacity: 50%;
+}
+
+.nominalPengeluaran {
+  background-color: #f7a300;
+  border: 2px transparent;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.ctaEditDelPengeluaran {
+  display: flex;
+  gap: 20px;
+}
+
+.ctaEditPengeluaran {
+  height: 80px;
+  width: 80px;
+  font-size: 50px;
+  border: 2px transparent;
+  border-radius: 8px;
+  background-color: #0086d2;
+  color: white;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctaEditPengeluaran:hover {
+  transform: scale(1.1);
+}
+
+.ctaDelPengeluaran {
+  height: 80px;
+  width: 80px;
+  font-size: 50px;
+  border: 2px transparent;
+  border-radius: 8px;
+  background-color: #b32b2b;
+  color: white;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctaDelPengeluaran:hover {
+  transform: scale(1.1);
 }
 
 /* responsive tablet */
 @media screen and (min-width: 500px) and (max-width: 1024px) {
-    .addIcon{
-        font-size: 50px;
-        display: flex;
-        justify-content: flex-end;
-        padding: 50px 50px 0px 0px;
-    }
-    
-    .addIcon > a{
-        color: black;
-    }
-
-    .pengeluaranJudul{
-        text-align: center;
-        text-transform: capitalize;
-        margin: 0px;
-        font-size: 35px;
-    }
-    
-    .containerTampilan{
+    .addIconPengeluaranContainer {
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        padding: 50px 30px 0px 30px;
+      }
+      
+      .addIconPengeluaranJudul {
+        font-size: 18px;
+      }
+      
+      .addPengeluaranLink {
+        text-decoration: none;
+      }
+      
+      .btnAddPengeluaran {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 200px;
         justify-content: center;
-        margin: 50px 0px 100px 0px;
+        border-radius: 8px;
+        border: 2px transparent;
+        background-color: #3b8c15;
+        cursor: pointer;
+      }
+      
+      .addPengeluaranIcon {
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+      }
+      
+      .addIconPengeluaranTxt {
+        color: white;
+        font-size: 18px;
+        text-transform: capitalize;
+      }
+      
+      .containerTampilan {
+        display: flex;
+        padding: 50px 30px 0px 30px;
         flex-wrap: wrap;
         gap: 30px;
-    }
-    
-    .tampilanDataPengeluaran{
-        justify-content: center;
-        height: 100px;
-        margin: unset;
-        width: 210px;
+      }
+      
+      .tampilanDataPengeluaran {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      
+      .detailPengeluaranNominalTitle {
+        display: flex;
+        height: 70px;
+        width: 520px;
         padding: 20px;
         border-radius: 10px;
-        background-color: #FCD770;
+        background-color: #fcd770;
         color: black;
-        font-size: 15px;
+        font-size: 20px;
         text-transform: capitalize;
         font-weight: 500;
         text-decoration: none;
-    }
+        justify-content: space-between;
+      }
+      
+      .nominalTitlePengeluaran {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .tanggalPengeluaran {
+        opacity: 50%;
+      }
+      
+      .nominalPengeluaran {
+        background-color: #f7a300;
+        border: 2px transparent;
+        border-radius: 5px;
+        padding: 5px;
+        font-weight: bold;
+      }
+      
+      .ctaEditDelPengeluaran {
+        display: flex;
+        gap: 20px;
+      }
+      
+      .ctaEditPengeluaran {
+        height: 80px;
+        width: 80px;
+        font-size: 50px;
+        border: 2px transparent;
+        border-radius: 8px;
+        background-color: #0086d2;
+        color: white;
+        cursor: pointer;
+        transition: 0.1s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .ctaEditPengeluaran:hover {
+        transform: scale(1.1);
+      }
+      
+      .ctaDelPengeluaran {
+        height: 80px;
+        width: 80px;
+        font-size: 50px;
+        border: 2px transparent;
+        border-radius: 8px;
+        background-color: #b32b2b;
+        color: white;
+        cursor: pointer;
+        transition: 0.1s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .ctaDelPengeluaran:hover {
+        transform: scale(1.1);
+      }
 }
 
 /* Responsive HP */
 @media screen and (min-width: 320px) and (max-width: 500px) {
-    .addIcon{
-        font-size: 50px;
-        color: black;
-        display: flex;
-        justify-content: flex-end;
-        padding: 20px 50px 0px 0px;
-    }
+  .addIconPengeluaranContainer {
+    display: flex;
+    /* align-content: center; */
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 10px 0px 10px;
+  }
 
-    .judulPengeluaran{
-        display: flex;
-        justify-content: center;
-    }
+  .addIconPengeluaranJudul {
+    font-size: 15px;
+  }
 
-    .pengeluaranJudul{
-        text-align: center;
-        text-transform: capitalize;
-        margin: 0px 0px 5px 0px;
-        font-size: 25px;
-        width: 250px;
-    }
-    
-    .containerTampilan{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 20px 0px 50px 0px;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-    
-    .tampilanDataPengeluaran{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: unset;
-        height: 90px;
-        width: 250px;
-        padding: 10px;
-        border-radius: 10px;
-        background-color: #FCD770;
-        color: black;
-        font-size: 15px;    
-        text-transform: capitalize;
-        font-weight: 500;
-        text-decoration: none;
-    }    
+  .addPengeluaranLink {
+    text-decoration: none;
+  }
+
+  .btnAddPengeluaran {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 175px;
+    height: 50px;
+    justify-content: center;
+    border-radius: 8px;
+    border: 2px transparent;
+    background-color: #3b8c15;
+    cursor: pointer;
+  }
+
+  .addPengeluaranIcon {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  .addIconPengeluaranTxt {
+    color: white;
+    font-size: 18px;
+    margin: 0px;
+    text-transform: capitalize;
+  }
+
+  .containerTampilan {
+    display: flex;
+    padding: 50px 10px 0px 10px;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .tampilanDataPengeluaran {
+    display: flex;
+    gap: 5px;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+
+  .detailPengeluaranNominalTitle {
+    display: flex;
+    height: 60px;
+    width: 330px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fcd770;
+    color: black;
+    font-size: 15px;
+    text-align: unset;
+    text-transform: capitalize;
+    font-weight: 500;
+    text-decoration: none;
+    justify-content: space-between;
+  }
+
+  .nominalTitlePengeluaran {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tanggalPengeluaran {
+    opacity: 50%;
+  }
+
+  .nominalPengeluaran {
+    background-color: #f7a300;
+    border: 2px transparent;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+  }
+
+  .ctaEditDelPengeluaran {
+    display: flex;
+    gap: 10px;
+  }
+
+  .ctaEditPengeluaran {
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    border: 2px transparent;
+    border-radius: 8px;
+    background-color: #0086d2;
+    color: white;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+  }
+
+  .ctaEditPengeluaran:hover {
+    transform: scale(1.1);
+  }
+
+  .ctaDelPengeluaran {
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    border: 2px transparent;
+    border-radius: 8px;
+    background-color: #b32b2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+    display: flex;
+    align-items: center;
+  }
+
+  .ctaDelPengeluaran:hover {
+    transform: scale(1.1);
+  }
 }

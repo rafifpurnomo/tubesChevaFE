@@ -4,6 +4,18 @@ import { Icon } from "@iconify/react";
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
+import Swal from "sweetalert2";
+
+function renderStatusClass(status) {
+  if (status === 'sudah') {
+    return 'status-sudah';
+  } else if (status === 'belum') {
+    return 'status-belum';
+  } else if (status===null){
+    return 'status-null'
+  }
+  return '';
+}
 
 function Kategori() {
   var [data, setData] = useState([]);
@@ -45,7 +57,9 @@ function Kategori() {
             <div key={index} className="tampilDataContainer">
               <div className="tampilanData">
                 <p className="namaKategori">{kategori.kategori}</p>
-                <div className="statusKategori">{kategori.status}</div>
+                <div className={`statusKategori ${renderStatusClass(kategori.status)}`}>
+                {kategori.status}
+                </div>
               </div>
               <div className="ctaEditDelKategori">
                 <a href={"/DetailKategori/" + index}>
@@ -87,8 +101,14 @@ function hapusDataKategori(index) {
       }
     )
     .then((response) => {
-      alert(response.data["message"]);
-      window.location.assign("/Kategori");
+      Swal.fire({
+        title: "Succes!",
+        text: "data berhasil di hupus",
+        icon: "success",
+        confirmButtonText: "kembali ke beranda",
+      }).then(function(){
+        window.location = '/Kategori'
+      })
     })
     .catch((error) => {
       alert(error);

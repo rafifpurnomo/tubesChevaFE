@@ -1,186 +1,176 @@
-.icon{
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    margin-top: 30px;
-    align-items: center;
+.AddKategoriContainerBack {
+  padding: 10px 0px 20px 20px;
+  text-transform: capitalize;
 }
 
-.backIcon{
-    color: black;
-    font-size: 50px;
+.AddKategoriContainerBackJudul {
+  font-size: 18px;
 }
 
-.containerTampilanNama{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 50px;
+.containerTampilanNama {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
 }
 
-.nama > input{
-    width: 700px;
-    height: 40px;
-    border: 2px solid black;
-    border-radius: 5px;
-    font-size: 20px;
-    padding-left: 10px;
-    font-weight: bold;
+.judulAddKategori > input {
+  width: 700px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 20px;
+  padding-left: 10px;
+  font-weight: bold;
 }
 
-.nama > h2{
-    text-transform: capitalize;
-    font-size: 30px;
+.judulAddKategori > h2 {
+  text-transform: capitalize;
+  font-size: 30px;
 }
 
-.DeleteKategoriCTA{
-    display: flex;
-    gap: 30px;
-    margin-left: 490px;
+.DeleteKategoriCTA {
+  display: flex;
+  gap: 30px;
+  margin-left: 490px;
 }
 
 .DeleteKategoriCTA > button {
-    width: 100px;
-    cursor: pointer;
-    height:50px;
-    border: 2px solid black;
-    border-radius: 10px;
-    background-color: transparent;
-    font-weight: bold;
+  width: 100px;
+  cursor: pointer;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+  font-weight: bold;
 }
 
-.deleteKategori{
-    width: 100px;
-    cursor: pointer;
-    height:50px;
-    border: 2px solid black;
-    border-radius: 10px;
-    background-color: transparent;
-    font-weight: bold;
+.deleteKategori {
+  width: 100px;
+  cursor: pointer;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+  font-weight: bold;
 }
 
-.addKategori:hover{
-    background-color: #F7A300;
-    color: white;
-    border: transparent;
-    transition: all 0.1s ease-in-out;
+.addKategori:hover {
+  background-color: #f7a300;
+  color: white;
+  border: transparent;
+  transition: all 0.1s ease-in-out;
 }
 
-.deleteKategori:hover{
-    background-color: #CB3506;
-    color: white;
-    transition: all 0.1s ease-in-out;
-    border: transparent;
+.deleteKategori:hover {
+  background-color: #cb3506;
+  color: white;
+  transition: all 0.1s ease-in-out;
+  border: transparent;
 }
 
-.AddKategoriBottom{
-    margin-bottom: 150px;
+.AddKategoriBottom {
+  margin-bottom: 150px;
 }
 
 /* responsive tablet */
 @media screen and (min-width: 500px) and (max-width: 1024px) {
-    .icon{
-        display: flex;
-        justify-content: space-between;
-        padding: 30px;
-        margin-top: 30px;
-        align-items: center;
-    }
-    
-    .backIcon{
-        color: black;
-        font-size: 50px;
-    }
-    
-    .containerTampilanNama{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .nama > input{
-        width: 400px;
-        height: 40px;
-        border: 2px solid black;
-        border-radius: 5px;
-    }
-    
-    .nama > h2{
-        text-transform: capitalize;
-        font-size: 30px;
-    }
+  .AddKategoriContainerBack {
+    padding: 10px 0px 20px 20px;
+  }
 
-    .DeleteKategoriCTA{
-        display: flex;
-        gap: 30px;
-        margin-left: 190px;
-    }
-    
-    .DeleteKategoriCTA > button {
-        width: 100px;
-        height: 50px;
-        border: 2px solid black;
-        border-radius: 10px;
-        background-color: transparent;
-        font-weight: bold;
-    }
-    
-    .AddKategoriBottom{
-        margin-bottom: 150px;
-    }
+  .AddKategoriContainerBackJudul {
+    font-size: 18px;
+  }
+
+  .containerTampilanNama {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .judulAddKategori > input {
+    width: 720px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+
+  .judulAddKategori > h2 {
+    text-transform: capitalize;
+    font-size: 30px;
+    margin: 15px 0px 5px 0px;
+  }
+
+  .DeleteKategoriCTA {
+    display: flex;
+    gap: 30px;
+    margin-left: 500px;
+  }
+
+  .DeleteKategoriCTA > button {
+    width: 100px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: transparent;
+    font-weight: bold;
+  }
+
+  .AddKategoriBottom {
+    margin-bottom: 150px;
+  }
 }
 
 /* Responsive HP */
 @media screen and (min-width: 320px) and (max-width: 500px) {
-    .icon{
-        display: flex;
-        justify-content: space-between;
-        padding: 30px;
-        margin-top: 30px;
-        align-items: center;
-    }
-    
-    .backIcon{
-        color: black;
-        font-size: 50px;
-    }
-    
-    .containerTampilanNama{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .nama > input{
-        width: 300px;
-        height: 40px;
-        border: 2px solid black;
-        border-radius: 5px;
-    }
-    
-    .nama > h2{
-        text-transform: capitalize;
-        font-size: 30px;
-    }
+  .AddKategoriContainerBack {
+    padding: 10px 0px 20px 20px;
+    width: 220px;
+    text-transform: capitalize;
+  }
 
-    .DeleteKategoriCTA{
-        display: flex;
-        gap: 30px;
-        margin-left: 90px;
-    }
-    
-    .DeleteKategoriCTA > button {
-        width: 100px;
-        height: 50px;
-        border: 2px solid black;
-        border-radius: 10px;
-        background-color: transparent;
-        font-weight: bold;
-    }
-    
-    .AddKategoriBottom{
-        margin-bottom: 150px;
-    }
+  .AddKategoriContainerBackJudul {
+    font-size: 18px;
+  }
+
+  .containerTampilanNama {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .judulAddKategori > input {
+    width: 300px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+
+  .judulAddKategori > h2 {
+    text-transform: capitalize;
+    font-size: 20px;
+    margin: 15px 0px 5px 0px;
+  }
+
+  .DeleteKategoriCTA {
+    display: flex;
+    gap: 30px;
+    margin-left: 90px;
+  }
+
+  .DeleteKategoriCTA > button {
+    width: 100px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: transparent;
+    font-weight: bold;
+  }
+
+  .AddKategoriBottom {
+    margin-bottom: 150px;
+  }
 }

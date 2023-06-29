@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./DetailKategori.css";
-import { Icon } from "@iconify/react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 function DetailKategori() {
   const { index } = useParams();
@@ -124,12 +124,23 @@ function editDataKategori(index, kategori, status, deskripsi) {
       }
     )
     .then((response) => {
-      alert(response.data["message"]);
-      window.location.assign("/Kategori");
+      Swal.fire({
+        title: "Succes!",
+        text: "data berhasil di ubah",
+        icon: "success",
+        confirmButtonText: "kembali ke beranda",
+      }).then(function(){
+        window.location = '/Kategori'
+      })
     })
     .catch((error) => {
       if (error.response && error.response.status === 400) {
-        alert("Data belum terisi!");
+        Swal.fire({
+          title: "Error!",
+          text: "data belum terisi",
+          icon: "error",
+          confirmButtonText: "lanjutkan",
+        });
       } else {
         alert("Error: " + error.message);
       }

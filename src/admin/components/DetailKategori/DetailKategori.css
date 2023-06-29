@@ -41,6 +41,7 @@
 
 #deskripsiKategori {
   width: 720px;
+  border: 1px solid black;
 }
 
 .btnDetailKategori {
@@ -103,8 +104,8 @@
     gap: 20px;
   }
 
-  .najudulDetailKategorima > input {
-    width: 400px;
+  .judulDetailKategori > input {
+    width: 720px;
     height: 40px;
     border: 2px solid black;
     border-radius: 5px;
