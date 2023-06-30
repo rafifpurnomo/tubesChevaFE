@@ -14,6 +14,7 @@ import DetailUser from "./components/DetailUser/DetailUser";
 import Profile from "./components/Profile/Profile";
 import LoginPage from "../loginPage/LoginPage";
 import Footer from "./components/footer/Footer";
+import Income from "./components/Income/Income";
 
 function Admin() {
   return (
@@ -36,6 +37,7 @@ function Admin() {
           <Route path="/AddCreateUser" element={<AddCreateUser />} />
           <Route path="/DetailUser/:index" element={<DetailUser />} />
           <Route path="/Profile" element={<Profile/>} />
+          <Route path="/Income" element={<Income/>} />
         </Routes>
       </Router>
       <Footer/>

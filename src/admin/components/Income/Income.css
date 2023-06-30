@@ -1,0 +1,31 @@
+.judulIncome{
+    text-align: center;
+    margin: 50px 0px 0px 0px;
+    text-transform: capitalize;
+}
+
+.containerIncome{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 20px 0px 20px;
+}
+
+.bulanIncomeLink{
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+.bulanIncome{
+    background-color: #F7A300;
+    width: 200px;
+    height: 70px;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

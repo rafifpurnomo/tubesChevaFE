@@ -40,19 +40,18 @@ function DetailUser() {
 
   return (
     <div>
-      <div className="icon">
-        <a href="/DataAnggota" className="backIcon">
-          <Icon icon="ion:arrow-back" />
-        </a>
+      <div className="addIconUserContainer">
+        <p className="addIconUserJudul">
+          <a href="/">Homepage / </a>
+          <span>
+            <a href="/DataAnggota">user / </a>
+          </span>
+          <span>
+            <a href="">edit anggota</a>
+          </span>
+        </p>
       </div>
       <div className="containerAddUser">
-        <div>
-          <img
-            src="/asset/buatAkun.png"
-            alt="gambar create user"
-            className="gambarCreateUser"
-          />
-        </div>
         <div className="inputanDiCreateAkun">
           <div className="InputUserNameCreateAkun">
             <p className="judulInputCreateAkun">nama</p>

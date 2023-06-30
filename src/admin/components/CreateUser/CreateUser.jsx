@@ -34,11 +34,7 @@ function CreateUser() {
       <div className="containerTampilan">
         {data.map((kategori, index) => {
           return (
-            <div
-              href={"/DetailPengeluaran/" + index}
-              className="tampilanDataPengeluaran"
-              key={index}
-            >
+            <div className="tampilanDataPengeluaran" key={index}>
               <div className="detailPengeluaranNominalTitle">
                 <div className="namaNimUser">
                   <span>{kategori.nama}</span>
@@ -49,7 +45,7 @@ function CreateUser() {
                 </div>
               </div>
               <div className="ctaEditDelPengeluaran">
-                <a href={"/DetailPengeluaran/" + index}>
+                <a href={"/DetailUser/" + index}>
                   <button className="ctaEditPengeluaran">
                     <Icon icon="bx:edit" />
                   </button>
@@ -91,9 +87,9 @@ function hapusDataAnggota(index) {
         text: "data berhasil di hupus",
         icon: "success",
         confirmButtonText: "kembali ke beranda",
-      }).then(function(){
-        window.location = '/DataAnggota'
-      })
+      }).then(function () {
+        window.location = "/DataAnggota";
+      });
     })
     .catch((error) => {
       alert(error);
