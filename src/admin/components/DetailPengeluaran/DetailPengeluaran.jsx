@@ -3,6 +3,8 @@ import "./DetailPengeluaran.css";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
+import Footer from "../footer/Footer";
+import Navbar from "../Navbar/Navbar";
 
 function DetailPengeluaran() {
   const { index } = useParams();
@@ -38,9 +40,10 @@ function DetailPengeluaran() {
 
   return (
     <div>
+      <Navbar/>
       <div className="addIconPengeluaranContainer">
         <p className="addIconPengeluaranJudul">
-          <a href="/">Homepage / </a>
+          <a href="/admin">Homepage / </a>
           <span>
             <a href="/Pengeluaran">pengeluaran / </a>
           </span>
@@ -112,7 +115,7 @@ function DetailPengeluaran() {
           ubah
         </button>
       </div>
-      <div className="DetailKategoriBottom"></div>
+      <Footer/>
     </div>
   );
 }

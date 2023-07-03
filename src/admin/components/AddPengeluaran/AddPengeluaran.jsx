@@ -2,6 +2,8 @@ import React from "react";
 import "./AddPengeluaran.css";
 import { useState } from "react";
 import axios from "axios";
+import Footer from "../footer/Footer";
+import Navbar from "../Navbar/Navbar";
 
 function DetailPengeluaran() {
   const [title, setTitle] = useState("");
@@ -11,9 +13,10 @@ function DetailPengeluaran() {
 
   return (
     <div>
+      <Navbar/>
       <div className="addIconPengeluaranContainer">
         <p className="addIconPengeluaranJudul">
-          <a href="/">Homepage / </a>
+          <a href="/admin">Homepage / </a>
           <span>
             <a href="/Pengeluaran">pengeluaran / </a>
           </span>
@@ -83,7 +86,7 @@ function DetailPengeluaran() {
           </button>
         </a>
       </div>
-      <div className="DetailKategoriBottom"></div>
+      <Footer/>
     </div>
   );
 }

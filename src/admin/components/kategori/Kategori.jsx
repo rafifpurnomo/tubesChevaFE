@@ -5,6 +5,8 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import Swal from "sweetalert2";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../footer/Footer";
 
 function renderStatusClass(status) {
   if (status === 'sudah') {
@@ -37,6 +39,7 @@ function Kategori() {
 
   return (
     <div>
+      <Navbar/>
       <div className="addIconKategoriContainer">
         <p className="addIconKategoriJudul">
           <a href="/">Homepage/</a>
@@ -82,7 +85,7 @@ function Kategori() {
           <p>Loading...</p>
         )}
       </div>
-      <div className="DetailKategoriBottom"></div>
+      <Footer/>
     </div>
   );
 }

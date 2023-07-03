@@ -1,73 +1,47 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import DetailIncome from "../DetailIncome/DetailIncome";
 import "./Income.css";
 
 function Income() {
+  var [data, setData] = useState([]);
+  const [selectedMonth, setSelectedMonth] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/getpendapatan", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
   return (
     <>
       <h1 className="judulIncome">income chevalier 2023</h1>
       <div className="containerIncome">
-        <div>
-          <a href="" className="bulanIncomeLink">
-            <div className="bulanIncome">januari</div>
-          </a>
-        </div>
-        <div>
-          <a href="" className="bulanIncomeLink">
-            <div className="bulanIncome">februari</div>
-          </a>
-        </div>
-        <div>
-          <a href="" className="bulanIncomeLink">
-            <div className="bulanIncome">maret</div>
-          </a>
-        </div>
-        <div>
-          <a href="" className="bulanIncomeLink">
-            <div className="bulanIncome">april</div>
-          </a>
-        </div>
-        <div>
-          <a href="" className="bulanIncomeLink">
-            <div className="bulanIncome">mei</div>
-          </a>
-        </div>
-        <div>
-          <a href="" className="bulanIncomeLink">
-            <div className="bulanIncome">juni</div>
-          </a>
-        </div>
-        <div>
-          <a href="" className="bulanIncomeLink">
-            <div className="bulanIncome">juli</div>
-          </a>
-        </div>
-        <div>
-          <a href="" className="bulanIncomeLink">
-            <div className="bulanIncome">agustus</div>
-          </a>
-        </div>
-        <div>
-          <a href="" className="bulanIncomeLink">
-            <div className="bulanIncome">september</div>
-          </a>
-        </div>
-        <div>
-          <a href="" className="bulanIncomeLink">
-            <div className="bulanIncome">oktober</div>
-          </a>
-        </div>
-        <div>
-          <a href="" className="bulanIncomeLink">
-            <div className="bulanIncome">november</div>
-          </a>
-        </div>
-        <div>
-          <a href="" className="bulanIncomeLink">
-            <div className="bulanIncome">desember</div>
-          </a>
-        </div>
+        {data.length > 0 ? (
+          data.map((month, index) => (
+            <div key={index}>
+              <a
+                href={"/DetailIncome/" + index}
+                className="bulanIncomeLink"
+              >
+                <div className="bulanIncome">{month.month}</div>
+              </a>
+            </div>
+          ))
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
+      {selectedMonth && <DetailIncome data={selectedMonth} />}
     </>
   );
 }

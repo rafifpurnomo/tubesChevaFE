@@ -20,27 +20,8 @@ function Admin() {
   return (
     <div>
       <Navbar />
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/Kategori" element={<Kategori />} />
-          <Route path="/DetailKategori/:index" element={<DetailKategori />} />
-          <Route path="/AddKategori" element={<AddKategori />} />
-          <Route path="/EditKategori/:index" element={<DetailKategori />} />
-          <Route path="/Pengeluaran" element={<Pengeluaran />} />
-          <Route path="/DataAnggota" element={<CreateUser />} />
-          <Route
-            path="/DetailPengeluaran/:index"
-            element={<DetailPengeluaran />}
-          />
-          <Route path="/AddPengeluaran" element={<AddPengeluaran />} />
-          <Route path="/AddCreateUser" element={<AddCreateUser />} />
-          <Route path="/DetailUser/:index" element={<DetailUser />} />
-          <Route path="/Profile" element={<Profile/>} />
-          <Route path="/Income" element={<Income/>} />
-        </Routes>
-      </Router>
-      <Footer/>
+      <Home />
+      <Footer />
     </div>
   );
 }

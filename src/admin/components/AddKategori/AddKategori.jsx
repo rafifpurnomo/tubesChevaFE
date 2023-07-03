@@ -3,6 +3,8 @@ import "./AddKategori.css";
 import axios from "axios";
 import { useState } from "react";
 import Swal from "sweetalert2";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../footer/Footer";
 
 function AddKategori() {
   const [status, setStatus] = useState("");
@@ -11,9 +13,10 @@ function AddKategori() {
 
   return (
     <div>
+      <Navbar/>
       <div className="AddKategoriContainerBack">
         <p className="AddKategoriContainerBackJudul">
-          <a href="/">Homepage / </a>
+          <a href="/admin">Homepage / </a>
           <span>
             <a href="/Kategori">Kategori / </a>
           </span>
@@ -74,8 +77,8 @@ function AddKategori() {
             Tambahkan
           </button>
         </div>
-        <div className="AddKategoriBottom"></div>
       </div>
+        <Footer/>
     </div>
   );
 }

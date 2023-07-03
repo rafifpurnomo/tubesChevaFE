@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "../../admin/components/footer/Footer";
-import NavbarBeforeLogin from "../NavbarBeforeLogin/NavbarBeforeLogin";
+import Footer from "../admin/components/footer/Footer";
+import NavbarBeforeLogin from "./NavbarBeforeLogin/NavbarBeforeLogin";
 import "./Page.css";
 
 function Page() {
@@ -11,7 +11,7 @@ function Page() {
         <img src="/asset/home.png" alt="foto-home" className="foto-home" />
         <h1 className="">transparan, terbuka dan jujur</h1>
       </div>
-      <Footer />
+      <Footer/>
     </div>
   );
 }

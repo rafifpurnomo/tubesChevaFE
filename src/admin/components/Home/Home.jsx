@@ -1,10 +1,13 @@
 import React from "react";
 import "./Home.css";
 import { Icon } from "@iconify/react";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../footer/Footer";
 
 function Home() {
   return (
     <div>
+      <Navbar/>
       <div className="containerSatu">
         <img src="/asset/home.png" alt="foto-home" className="foto-home" />
         <h1 className="">transparan, terbuka dan jujur</h1>
@@ -51,6 +54,7 @@ function Home() {
           </div>
         </a>
       </div>
+      <Footer/>
     </div>
   );
 }

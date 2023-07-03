@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { Link, Navigate } from "react-router-dom";
 import Admin from "../admin/Admin";
 import "./LoginPage.css";
 
@@ -56,8 +57,8 @@ function LoginPage() {
   };
 
   if (loggedIn && role === "admin") {
-    return  <Admin/>;
-    // return <Navigate to="/admin" replace={true}/>;
+    // return <Link to={"/admin"} />;
+    return <Navigate to="/admin" replace={true}/>;
   }
   return (
     <div>

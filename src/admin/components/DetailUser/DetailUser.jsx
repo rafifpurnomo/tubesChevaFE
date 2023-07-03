@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
+import Footer from "../footer/Footer";
+import Navbar from "../Navbar/Navbar";
 
 function DetailUser() {
   const { index } = useParams();
@@ -40,9 +42,10 @@ function DetailUser() {
 
   return (
     <div>
+      <Navbar/>
       <div className="addIconUserContainer">
         <p className="addIconUserJudul">
-          <a href="/">Homepage / </a>
+          <a href="/admin">Homepage / </a>
           <span>
             <a href="/DataAnggota">user / </a>
           </span>
@@ -120,7 +123,7 @@ function DetailUser() {
           edit
         </button>
       </div>
-      <div className="DetailKategoriBottom"></div>
+      <Footer/>
     </div>
   );
 }

@@ -4,6 +4,8 @@ import "./AddCreateUser.css";
 import { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
+import Footer from "../footer/Footer";
+import Navbar from "../Navbar/Navbar";
 
 function AddCreateUser() {
   const [nama, setNama] = useState("");
@@ -13,9 +15,10 @@ function AddCreateUser() {
 
   return (
     <div>
+      <Navbar/> 
       <div className="addIconUserContainer">
         <p className="addIconUserJudul">
-          <a href="/">Homepage / </a>
+          <a href="/admin">Homepage / </a>
           <span>
             <a href="/DataAnggota">user / </a>
           </span>
@@ -90,7 +93,7 @@ function AddCreateUser() {
           Tambahkan
         </button>
       </div>
-      <div className="DetailKategoriBottom"></div>
+      <Footer/>
     </div>
   );
 }

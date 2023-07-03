@@ -5,6 +5,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
+import Footer from "../footer/Footer";
+import Navbar from "../Navbar/Navbar";
 
 function CreateUser() {
   var [data, setData] = useState([]);
@@ -17,9 +19,10 @@ function CreateUser() {
 
   return (
     <div>
+      <Navbar/>
       <div className="addIconUserContainer">
         <p className="addIconUserJudul">
-          <a href="/">Homepage / </a>
+          <a href="/admin">Homepage / </a>
           <span>
             <a href="/DataAnggota">user</a>
           </span>
@@ -63,7 +66,7 @@ function CreateUser() {
           );
         })}
       </div>
-      <div className="createUserBottom "></div>
+      <Footer/>
     </div>
   );
 }

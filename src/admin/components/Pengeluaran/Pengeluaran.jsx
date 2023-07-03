@@ -5,6 +5,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
+import Footer from "../footer/Footer";
+import Navbar from "../Navbar/Navbar";
 
 function Pengeluaran() {
   var [data, setData] = useState([]);
@@ -17,6 +19,7 @@ function Pengeluaran() {
 
   return (
     <div>
+      <Navbar/>
       <div className="addIconPengeluaranContainer">
         <p className="addIconPengeluaranJudul">
           <a href="/">Homepage/</a>
@@ -34,11 +37,7 @@ function Pengeluaran() {
       <div className="containerTampilan">
         {data.map((kategori, index) => {
           return (
-            <div
-              href={"/DetailPengeluaran/" + index}
-              className="tampilanDataPengeluaran"
-              key={index}
-            >
+            <div className="tampilanDataPengeluaran" key={index}>
               <div className="detailPengeluaranNominalTitle">
                 <div className="nominalTitlePengeluaran">
                   <span>{kategori.title}</span>
@@ -69,7 +68,7 @@ function Pengeluaran() {
           );
         })}
       </div>
-      <div className="DetailKategoriBottom"></div>
+      <Footer/>
     </div>
   );
 }
@@ -93,9 +92,9 @@ function hapusDataPengeluaran(index) {
         text: "data berhasil di hupus",
         icon: "success",
         confirmButtonText: "kembali ke beranda",
-      }).then(function(){
-        window.location = '/Pengeluaran'
-      })
+      }).then(function () {
+        window.location = "/Pengeluaran";
+      });
     })
     .catch((error) => {
       alert(error);

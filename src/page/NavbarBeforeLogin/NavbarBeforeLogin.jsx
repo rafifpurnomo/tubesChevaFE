@@ -10,7 +10,7 @@ function NavbarBeforeLogin() {
           <a href="/">
             <li>home</li>
           </a>
-          <a href="/">
+          <a href="/loginPage">
             <li>Login</li>
           </a>
         </ul>

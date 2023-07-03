@@ -3,6 +3,8 @@ import "./DetailKategori.css";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../footer/Footer";
 
 function DetailKategori() {
   const { index } = useParams();
@@ -36,9 +38,10 @@ function DetailKategori() {
 
   return (
     <div>
+      <Navbar/>
       <div className="detailContainerBack">
         <p className="detailContainerBackJudul">
-          <a href="/">Homepage / </a>
+          <a href="/admin">Homepage / </a>
           <span>
             <a href="/Kategori">Kategori / </a>
           </span>
@@ -101,8 +104,8 @@ function DetailKategori() {
             edit
           </button>
         </div>
-        <div className="DetailKategoriBottom"></div>
       </div>
+        <Footer/>
     </div>
   );
 }
