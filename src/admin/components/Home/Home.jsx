@@ -7,7 +7,7 @@ import Footer from "../footer/Footer";
 function Home() {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className="containerSatu">
         <img src="/asset/home.png" alt="foto-home" className="foto-home" />
         <h1 className="">transparan, terbuka dan jujur</h1>
@@ -43,7 +43,7 @@ function Home() {
             <h2>buat user</h2>
           </div>
         </a>
-        <a href="" className="pilihanPembayaran">
+        <a href="./Verifikasi" className="pilihanPembayaran">
           <div className="containerPilihanPembayaran">
             <img
               src="/asset/verifikasi.png"
@@ -54,7 +54,7 @@ function Home() {
           </div>
         </a>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

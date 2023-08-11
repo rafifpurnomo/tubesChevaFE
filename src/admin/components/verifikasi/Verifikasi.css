@@ -1,0 +1,319 @@
+.addIconVerifikasiContainer {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 30px 0px 30px;
+}
+
+.addIconVerifikasiJudul {
+  font-size: 18px;
+}
+
+.containerVerifikasi {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+}
+
+.tampilanDataVerifikasi {
+  width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fcd770;
+  display: flex;
+  gap: 40px;
+}
+
+.gambarVerifikasi {
+  width: 200px;
+  height: 200px;
+}
+
+.deskripsiContainerVerifikasi {
+  display: flex;
+}
+
+.namaDataVerifikasi,
+.descVerifikasi,
+.tanggalVerifikasi,
+.nominalVerifikasi {
+  text-transform: capitalize;
+}
+
+.namaDataVerifikasi {
+  font-size: 20px;
+  margin: 10px 0px 0px 0px;
+  font-weight: 600;
+}
+
+.descVerifikasi {
+  font-size: 17px;
+  margin: 10px 0px 0px 0px;
+  font-weight: bold;
+  opacity: 50%;
+}
+
+.tanggalVerifikasi {
+  font-size: 17px;
+  margin: 10px 0px 0px 0px;
+  font-weight: bold;
+  opacity: 50%;
+}
+
+.nominalVerifikasi {
+  font-size: 17px;
+  text-align: center;
+  margin: 16px 0px 0px 0px;
+  padding: 5px;
+  background-color: #f7a300;
+  border: 2px transparent;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.statusVerifikasi {
+  margin: 10px 0px 0px 250px;
+  width: 150px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: green;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+
+.status-sudah {
+  background-color: green;
+}
+
+.status-belum {
+  background-color: grey;
+}
+
+.status-ditolak {
+  background-color: #b32b2b;
+}
+
+.status-null {
+  background-color: transparent;
+}
+
+/* responsive tablet */
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+  .containerVerifikasi {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  .tampilanDataVerifikasi {
+    width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fcd770;
+    display: flex;
+    gap: 40px;
+  }
+
+  .gambarVerifikasi {
+    width: 200px;
+    height: 200px;
+  }
+
+  .deskripsiContainerVerifikasi {
+    display: flex;
+  }
+
+  .namaDataVerifikasi,
+  .descVerifikasi,
+  .tanggalVerifikasi,
+  .nominalVerifikasi {
+    text-transform: capitalize;
+  }
+
+  .namaDataVerifikasi {
+    font-size: 20px;
+    margin: 10px 0px 0px 0px;
+    font-weight: 600;
+  }
+
+  .descVerifikasi {
+    font-size: 17px;
+    margin: 10px 0px 0px 0px;
+    font-weight: bold;
+    opacity: 50%;
+  }
+
+  .tanggalVerifikasi {
+    font-size: 17px;
+    margin: 10px 0px 0px 0px;
+    font-weight: bold;
+    opacity: 50%;
+  }
+
+  .nominalVerifikasi {
+    font-size: 17px;
+    text-align: center;
+    margin: 16px 0px 0px 0px;
+    padding: 5px;
+    background-color: #f7a300;
+    border: 2px transparent;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .statusVerifikasi {
+    margin: 10px 0px 0px 0px;
+    width: 130px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: green;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    text-transform: capitalize;
+  }
+
+  .status-sudah {
+    background-color: green;
+  }
+
+  .status-belum {
+    background-color: grey;
+  }
+
+  .status-ditolak {
+    background-color: #b32b2b;
+  }
+
+  .status-null {
+    background-color: transparent;
+  }
+}
+
+/* Responsive HP */
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .addIconVerifikasiContainer {
+    display: flex;
+    padding: 30px 10px 0px 10px;
+    flex-wrap: wrap;
+  }
+
+  .addIconVerifikasiJudul {
+    font-size: 15px;
+  }
+
+  .containerVerifikasi {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .tampilanDataVerifikasi {
+    width: 300px;
+    height: 160px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fcd770;
+    display: flex;
+    gap: 75px;
+    flex-wrap: wrap;
+  }
+
+  .gambarVerifikasi {
+    width: 100px;
+    height: 100px;
+    display: none;
+  }
+
+  .deskripsiContainerVerifikasi {
+    display: flex;
+  }
+
+  .namaDataVerifikasi,
+  .descVerifikasi,
+  .tanggalVerifikasi,
+  .nominalVerifikasi {
+    text-transform: capitalize;
+  }
+
+  .namaDataVerifikasi {
+    font-size: 20px;
+    margin: 0px 0px 0px 0px;
+    font-weight: 600;
+  }
+
+  .descVerifikasi {
+    font-size: 17px;
+    margin: 10px 0px 0px 0px;
+    font-weight: bold;
+    opacity: 50%;
+  }
+
+  .tanggalVerifikasi {
+    font-size: 17px;
+    margin: 10px 0px 0px 0px;
+    font-weight: bold;
+    opacity: 50%;
+  }
+
+  .nominalVerifikasi {
+    font-size: 15px;
+    text-align: center;
+    margin: 16px 0px 0px 0px;
+    padding: 5px;
+    background-color: #f7a300;
+    border: 2px transparent;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .statusVerifikasi {
+    margin: 0px 0px 0px 0px;
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    color: white;
+    background-color: green;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    text-transform: capitalize;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .status-sudah {
+    background-color: green;
+  }
+
+  .status-belum {
+    background-color: grey;
+  }
+
+  .status-ditolak {
+    background-color: #b32b2b;
+  }
+
+  .status-null {
+    background-color: transparent;
+  }
+}

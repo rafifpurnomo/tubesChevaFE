@@ -7,20 +7,23 @@ import { useEffect } from "react";
 import Swal from "sweetalert2";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../footer/Footer";
+import NotFound from "../NotFound/NotFound";
 
 function renderStatusClass(status) {
-  if (status === 'sudah') {
-    return 'status-sudah';
-  } else if (status === 'belum') {
-    return 'status-belum';
-  } else if (status===null){
-    return 'status-null'
+  if (status === "sudah") {
+    return "status-sudah";
+  } else if (status === "belum") {
+    return "status-belum";
+  } else if (status === null) {
+    return "status-null";
   }
-  return '';
+  return "";
 }
 
 function Kategori() {
   var [data, setData] = useState([]);
+  var [showData, setShowData] = useState([]);
+  var [page, setPage] = useState(0);
 
   useEffect(() => {
     axios
@@ -31,18 +34,23 @@ function Kategori() {
       })
       .then((response) => {
         setData(response.data);
+        setShowData(response.data.slice(0, 5));
       })
       .catch((error) => {
         console.error(error);
       });
   }, []);
 
+  useEffect(() => {
+    setShowData(data.slice(page * 5, page * 5 + 5));
+  }, [data, page]);
+
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className="addIconKategoriContainer">
         <p className="addIconKategoriJudul">
-          <a href="/">Homepage/</a>
+          <a href="/admin">Homepage / </a>
           <span>
             <a href="">Kategori</a>
           </span>
@@ -55,13 +63,17 @@ function Kategori() {
         </a>
       </div>
       <div className="containerTampilanKategori">
-        {data.length > 0 ? (
-          data.map((kategori, index) => (
+        {showData.length > 0 ? (
+          showData.map((kategori, index) => (
             <div key={index} className="tampilDataContainer">
               <div className="tampilanData">
                 <p className="namaKategori">{kategori.kategori}</p>
-                <div className={`statusKategori ${renderStatusClass(kategori.status)}`}>
-                {kategori.status}
+                <div
+                  className={`statusKategori ${renderStatusClass(
+                    kategori.status
+                  )}`}
+                >
+                  {kategori.status}
                 </div>
               </div>
               <div className="ctaEditDelKategori">
@@ -82,10 +94,41 @@ function Kategori() {
             </div>
           ))
         ) : (
-          <p>Loading...</p>
+          <div>
+            <NotFound/>
+          </div>
         )}
       </div>
-      <Footer/>
+      <div className="paginationInfo">
+        <p>Page: {page + 1}</p>
+      </div>
+      <div className="nextPrevKategori">
+        <div>
+          <button
+            className="prevKatgeori"
+            onClick={() =>
+              setPage((prevPage) => (prevPage > 0 ? prevPage - 1 : 0))
+            }
+          >
+            prev
+          </button>
+        </div>
+        <div>
+          <button
+            className="prevKatgeori"
+            onClick={() =>
+              setPage((prevPage) =>
+                prevPage < Math.ceil(data.length / 5) - 1
+                  ? prevPage + 1
+                  : prevPage
+              )
+            }
+          >
+            next
+          </button>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }
@@ -109,9 +152,9 @@ function hapusDataKategori(index) {
         text: "data berhasil di hupus",
         icon: "success",
         confirmButtonText: "kembali ke beranda",
-      }).then(function(){
-        window.location = '/Kategori'
-      })
+      }).then(function () {
+        window.location = "/Kategori";
+      });
     })
     .catch((error) => {
       alert(error);

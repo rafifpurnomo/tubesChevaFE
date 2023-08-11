@@ -1,31 +1,83 @@
-.judulIncome{
+.judulIncome {
+  text-align: center;
+  margin: 50px 0px 0px 0px;
+  text-transform: capitalize;
+}
+
+.containerIncome {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 20px 0px 20px;
+}
+
+.bulanIncomeLink {
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.bulanIncome {
+  background-color: #f7a300;
+  width: 200px;
+  height: 70px;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: ease-out 0.2s;
+}
+
+.bulanIncome:hover {
+  transform: scale(1.1);
+}
+
+/* responsive tablet */
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+}
+
+/* Responsive HP */
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .judulIncome {
     text-align: center;
+    font-size: 30px;
     margin: 50px 0px 0px 0px;
     text-transform: capitalize;
-}
+  }
 
-.containerIncome{
+  .containerIncome {
     display: flex;
-    gap: 30px;
+    gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 50px 20px 0px 20px;
-}
+    padding: 50px 10px 0px 10px;
+  }
 
-.bulanIncomeLink{
+  .bulanIncomeLink {
     text-decoration: none;
     color: black;
     text-transform: capitalize;
     font-weight: 700;
-}
-.bulanIncome{
-    background-color: #F7A300;
-    width: 200px;
-    height: 70px;
+  }
+  .bulanIncome {
+    background-color: #f7a300;
+    width: 150px;
+    height: 60px;
     padding: 10px;
     border: 2px solid transparent;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: ease-out 0.2s;
+  }
+
+  .bulanIncome:hover {
+    transform: scale(1.1);
+  }
 }

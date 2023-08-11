@@ -10,12 +10,28 @@ import Navbar from "../Navbar/Navbar";
 
 function CreateUser() {
   var [data, setData] = useState([]);
+  var [showData, setShowData] = useState([]);
+  var [page, setPage] = useState(0);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/getanggota", {}).then((response) => {
-      setData(response.data);
-    });
+    axios
+      .get("http://localhost:3000/getanggota", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((response) => {
+        setData(response.data);
+        setShowData(response.data.slice(0, 5));
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }, []);
+
+  useEffect(() => {
+    setShowData(data.slice(page * 5, page * 5 + 5));
+  }, [data, page]);
 
   return (
     <div>
@@ -35,7 +51,7 @@ function CreateUser() {
         </a>
       </div>
       <div className="containerTampilan">
-        {data.map((kategori, index) => {
+        {showData.map((kategori, index) => {
           return (
             <div className="tampilanDataPengeluaran" key={index}>
               <div className="detailPengeluaranNominalTitle">
@@ -65,6 +81,35 @@ function CreateUser() {
             </div>
           );
         })}
+      </div>
+      <div className="paginationInfo">
+        <p>Page: {page + 1}</p>
+      </div>
+      <div className="nextPrevKategori">
+        <div>
+          <button
+            className="prevKatgeori"
+            onClick={() =>
+              setPage((prevPage) => (prevPage > 0 ? prevPage - 1 : 0))
+            }
+          >
+            prev
+          </button>
+        </div>
+        <div>
+          <button
+            className="prevKatgeori"
+            onClick={() =>
+              setPage((prevPage) =>
+                prevPage < Math.ceil(data.length / 5) - 1
+                  ? prevPage + 1
+                  : prevPage
+              )
+            }
+          >
+            next
+          </button>
+        </div>
       </div>
       <Footer/>
     </div>

@@ -1,0 +1,19 @@
+.notFoundContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px;
+  flex-direction: column;
+}
+.notFoundImg {
+  width: 250px;
+  height: 250px;
+  display: flex;
+}
+
+.notFoundTitle {
+  margin: 20px 10px 10px 10px;
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: 500;
+}

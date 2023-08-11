@@ -139,6 +139,30 @@
   background-color: transparent;
 }
 
+.nextPrevKategori{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 10px 0px 0px 0px;
+}
+
+.prevKatgeori{
+  width: 80px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-weight: 700;
+  background-color: #fcd770;
+}
+
+.paginationInfo{
+  margin: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
 /* responsive tablet */
 @media screen and (min-width: 500px) and (max-width: 1024px) {
   .addIconKategoriContainer {
@@ -287,10 +311,8 @@
 @media screen and (min-width: 320px) and (max-width: 500px) {
   .addIconKategoriContainer {
     display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: space-between;
     padding: 30px 10px 0px 10px;
+    flex-wrap: wrap;
   }
 
   .addIconKategoriJudul {
@@ -391,7 +413,7 @@
     display: flex;
     align-items: center;
     height: 50px;
-    width: 330px;
+    width: 300px;
     padding: 20px;
     border-radius: 10px;
     background-color: #fcd770;

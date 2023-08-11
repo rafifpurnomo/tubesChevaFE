@@ -18,6 +18,10 @@ import AddPengeluaran from "./admin/components/AddPengeluaran/AddPengeluaran";
 import Navbar from "./admin/components/Navbar/Navbar";
 import Footer from "./admin/components/footer/Footer";
 import DetailIncome from "./admin/components/DetailIncome/DetailIncome";
+import AddIncome from "./admin/components/AddIncome/AddIncome";
+import Verifikasi from "./admin/components/verifikasi/Verifikasi";
+import DetailVerifikasi from "./admin/components/DetailVerifikasi/DetailVerifikasi";
+import NotFound from "./admin/components/NotFound/NotFound";
 
 function App() {
   return (
@@ -43,12 +47,13 @@ function App() {
           <Route path="/Income" element={<Income />} />
           <Route path="/loginPage" element={<LoginPage/>} />
           <Route path="/DetailIncome/:index" element={<DetailIncome/>} />
+          <Route path="/DetailIncome" element={<DetailIncome/>} />
+          <Route path="/AddIncome" element={<AddIncome/>} />
+          <Route path="/Verifikasi" element={<Verifikasi/>} />
+          <Route path="/DetailVerifikasi/:index" element={<DetailVerifikasi/>} />
         </Routes>
       </div>
     </Router>
-    // {/* <LoginPage/> */}
-    // <Admin />
-    // {/* <Page/> */}
   );
 }
 

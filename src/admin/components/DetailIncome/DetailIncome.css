@@ -1,0 +1,236 @@
+.CtaBbackIncome{
+  margin: 50px 0px 0px 20px;
+  font-size: 20px;
+}
+
+.incomeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.monthName{
+  font-size: 30px;
+  margin: 20px 0px 0px 0px;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.tableIncome {
+  margin-top: 50px;
+  width: 1000px;
+  font-weight: 600;
+}
+
+.tbodyIncome {
+  text-align: center;
+}
+
+.tableIncome,
+.theadIncome,
+.tdIncome {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.theadIncome {
+  background-color: #ffa800;
+}
+
+.tdIncome,
+.thIncome {
+  padding: 5px 0px 5px 0px;
+}
+
+.tableIncome .tbodyIncome .trIncome:nth-child(odd) {
+  background-color: #d9d9d9;
+}
+
+.tableIncome .tbodyIncome .trIncome:nth-child(even) {
+  background-color: #a3a0a0;
+}
+
+.tableIncome .tbodyIncome .trTotalIncome {
+  background-color: #3cbb27;
+}
+
+.tableIncome .trTotalIncome .tdIncome {
+  border: none;
+}
+
+.ctaAddIncome{
+  margin-top: 20px;
+}
+
+.btnAddIncome{
+  width: 250px;
+  height: 40px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-color: #FFA800;
+  text-transform: capitalize;
+  font-weight: bold;
+  cursor: pointer;
+  transition: ease-in-out 0.1s;
+}
+
+.btnAddIncome:hover{
+  border: 2px solid #FFA800;
+  background-color: transparent;
+}
+
+/* responsive tablet */
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+  .CtaBbackIncome{
+    margin: 50px 0px 0px 20px;
+    font-size: 20px;
+  }
+  
+  .incomeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tableIncome {
+    margin-top: 50px;
+    width: 600px;
+    font-weight: 600;
+  }
+  
+  .tbodyIncome {
+    text-align: center;
+  }
+  
+  .tableIncome,
+  .theadIncome,
+  .tdIncome {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  
+  .theadIncome {
+    background-color: #ffa800;
+  }
+  
+  .tdIncome,
+  .thIncome {
+    padding: 5px 0px 5px 0px;
+  }
+  
+  .tableIncome .tbodyIncome .trIncome:nth-child(odd) {
+    background-color: #d9d9d9;
+  }
+  
+  .tableIncome .tbodyIncome .trIncome:nth-child(even) {
+    background-color: #a3a0a0;
+  }
+  
+  .tableIncome .tbodyIncome .trTotalIncome {
+    background-color: #3cbb27;
+  }
+  
+  .tableIncome .trTotalIncome .tdIncome {
+    border: none;
+  }
+  
+  .ctaAddIncome{
+    margin-top: 20px;
+  }
+  
+  .btnAddIncome{
+    width: 250px;
+    height: 40px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: #FFA800;
+    text-transform: capitalize;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
+  }
+  
+  .btnAddIncome:hover{
+    border: 2px solid #FFA800;
+    background-color: transparent;
+  }
+}
+
+/* Responsive HP */
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .CtaBbackIncome{
+    margin: 50px 0px 0px 20px;
+    font-size: 20px;
+  }
+  
+  .incomeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tableIncome {
+    margin-top: 50px;
+    width: 350px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  .tbodyIncome {
+    text-align: center;
+  }
+  
+  .tableIncome,
+  .theadIncome,
+  .tdIncome {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  
+  .theadIncome {
+    background-color: #ffa800;
+  }
+  
+  .tdIncome,
+  .thIncome {
+    padding: 5px 0px 5px 0px;
+  }
+  
+  .tableIncome .tbodyIncome .trIncome:nth-child(odd) {
+    background-color: #d9d9d9;
+  }
+  
+  .tableIncome .tbodyIncome .trIncome:nth-child(even) {
+    background-color: #a3a0a0;
+  }
+  
+  .tableIncome .tbodyIncome .trTotalIncome {
+    background-color: #3cbb27;
+  }
+  
+  .tableIncome .trTotalIncome .tdIncome {
+    border: none;
+  }
+  
+  .ctaAddIncome{
+    margin-top: 20px;
+  }
+  
+  .btnAddIncome{
+    width: 150px;
+    height: 40px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: #FFA800;
+    text-transform: capitalize;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
+  }
+  
+  .btnAddIncome:hover{
+    border: 2px solid #FFA800;
+    background-color: transparent;
+  }
+}

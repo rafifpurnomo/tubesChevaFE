@@ -1,11 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import DetailIncome from "../DetailIncome/DetailIncome";
+import Footer from "../footer/Footer";
+import Navbar from "../Navbar/Navbar";
 import "./Income.css";
 
 function Income() {
   var [data, setData] = useState([]);
-  const [selectedMonth, setSelectedMonth] = useState(null);
+  var [selectedMonth, setSelectedMonth] = useState(null);
 
   useEffect(() => {
     axios
@@ -24,14 +26,27 @@ function Income() {
 
   return (
     <>
-      <h1 className="judulIncome">income chevalier 2023</h1>
-      <div className="containerIncome">
-        {data.length > 0 ? (
-          data.map((month, index) => (
+      <div>
+        {selectedMonth != null ? <DetailIncome data={data[selectedMonth]}/> : <ListBulan data={data} setSelectedMonth={setSelectedMonth}/>}
+      </div>
+    </>
+  );
+}
+
+const ListBulan=(props)=>{
+  return(
+    <div>
+      <Navbar/>
+    <h1 className="judulIncome">income chevalier 2023</h1>
+    <div className="containerIncome">
+        {props.data.length > 0 ? (
+          props.data.map((month, index) => (
             <div key={index}>
               <a
-                href={"/DetailIncome/" + index}
                 className="bulanIncomeLink"
+                onClick={()=>{
+                  props.setSelectedMonth(index)
+                }}
               >
                 <div className="bulanIncome">{month.month}</div>
               </a>
@@ -41,9 +56,9 @@ function Income() {
           <p>Loading...</p>
         )}
       </div>
-      {selectedMonth && <DetailIncome data={selectedMonth} />}
-    </>
-  );
+      <Footer/>
+    </div>
+  )
 }
 
 export default Income;
