@@ -1,10 +1,66 @@
-.adminLogoutCTA{
-    display: flex;
-    justify-content: center;
-    margin-top: 200px;
+.profilePageContainer {
+  padding: 50px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.logoutAdminCTA{
-    width: 200px;
-    height: 50px;
+.fotoProfile {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.userProfile {
+  text-transform: capitalize;
+}
+
+.profileRole,
+.profileDivisi,
+.profileNama {
+  margin-bottom: 5px;
+}
+
+.spanProfile {
+  font-size: 20px;
+}
+
+.adminLogoutCTA {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 30px;
+}
+
+.logoutAdminCTA {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-color: #f7a300;
+  transition: 0.1s ease-in-out;
+}
+
+.backAdminCta {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-color: #b32b2b;
+  transition: 0.1s ease-in-out;
+}
+
+.backAdminCta:hover {
+  transform: scale(1.1);
+}
+.logoutAdminCTA:hover {
+  transform: scale(1.1);
 }

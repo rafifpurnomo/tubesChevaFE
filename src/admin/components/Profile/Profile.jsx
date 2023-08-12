@@ -21,12 +21,36 @@ function Profile() {
   return (
     <>
       <Navbar />
+      <div className="profilePageContainer">
+        <div className="profilePageFoto">
+          <img
+            src="/asset/contohPPorang.jpeg"
+            alt="foto profile"
+            className="fotoProfile"
+          />
+        </div>
+        <div className="userProfile">
+          <div className="namaUser">
+            <h1 className="profileNama">nama</h1>
+            <span className="spanProfile">nama anda</span>
+          </div>
+          <div className="ProfiledivisiUser">
+            <h1 className="profileDivisi">divisi</h1>
+            <span className="spanProfile">divisi anda</span>
+          </div>
+          <div className="roleUser">
+            <h1 className="profileRole">role</h1>
+            <span className="spanProfile">role anda</span>
+          </div>
+        </div>
+      </div>
       <div className="adminLogoutCTA">
+        <button className="backAdminCta">kembali</button>
         <button className="logoutAdminCTA" onClick={logout}>
           logout
         </button>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }
