@@ -22,8 +22,8 @@ function DetailVerifikasi() {
   const [tolakButtonText, setTolakButtonText] = useState("tolak");
 
   useEffect(() => {
-    if (status === "sudah di verifikasi") {
-      setTerimaButtonText("sudah di verifikasi");
+    if (status === "verifikasi di terima") {
+      setTerimaButtonText("verifikasi di terima");
     } else {
       setTerimaButtonText("terima");
     }
@@ -104,8 +104,8 @@ function DetailVerifikasi() {
         <button
           className="btnTolakVerif"
           onClick={(e) => {
-            editDataVerifikasi(index, note, "data di tolak");
-            setTolakButtonText("data di tolak");
+            editDataVerifikasi(index, note, "verifikasi di tolak");
+            setTolakButtonText("verifikasi di tolak");
           }}
         >
           tolak
@@ -113,8 +113,8 @@ function DetailVerifikasi() {
         <button
           className="btnTerimaVerif"
           onClick={(e) => {
-            editDataVerifikasi(index, note, "sudah di verifikasi");
-            setTerimaButtonText("sudah di verifikasi");
+            editDataVerifikasi(index, note, "verifikasi di terima");
+            setTerimaButtonText("verifikasi di terima");
           }}
         >
           Terima
@@ -144,7 +144,7 @@ function DetailVerifikasi() {
         }
       )
       .then((response) => {
-        if (status === "sudah di verifikasi") {
+        if (status === "verifikasi di terima") {
           Swal.fire({
             title: "Berhasil!",
             text: "Data berhasil diterima",
@@ -153,7 +153,7 @@ function DetailVerifikasi() {
           }).then(function () {
             window.location = "/verifikasi";
           });
-        } else if (status === "data di tolak") {
+        } else if (status === "verifikasi di tolak") {
           Swal.fire({
             title: "Ditolak!",
             text: "Data telah ditolak",

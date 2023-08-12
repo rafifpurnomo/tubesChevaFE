@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import Swal from "sweetalert2";
 import Footer from "../footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import "./AddIncome.css";
@@ -61,19 +62,18 @@ function AddIncome() {
         </div>
       </div>
       <div className="ctaAddCancelIncome">
-        <a href="">
+        <a href="/Income">
           <button className="BtnAddIncome">batalkan</button>
         </a>
-        <a href="">
-          <button
-            className="BtnCancelIncome"
-            onClick={(e) => {
-              addDataIncome(tanggal, deskripsi, nominal);
-            }}
-          >
-            tambahkan
-          </button>
-        </a>
+
+        <button
+          className="BtnCancelIncome"
+          onClick={(e) => {
+            addDataIncome(tanggal, deskripsi, nominal);
+          }}
+        >
+          tambahkan
+        </button>
       </div>
       <Footer />
     </div>
@@ -96,14 +96,23 @@ function addDataIncome(tanggal, deskripsi, nominal) {
       }
     )
     .then((response) => {
-      alert(response.data["message"]);
-      console.log(response.data);
-      window.location.assign("/Income");
+      Swal.fire({
+        title: "Succes!",
+        text: "data berhasil di tambahkan",
+        icon: "success",
+        confirmButtonText: "kembali ke beranda",
+      }).then(function () {
+        window.location = "/Income";
+      });
     })
     .catch((error) => {
       if (error.response && error.response.status === 400) {
-        alert("Data belum terisi!");
-        console.log(error)
+        Swal.fire({
+          title: "Error!",
+          text: "data belum terisi",
+          icon: "error",
+          confirmButtonText: "lanjutkan",
+        });
       } else {
         alert("Error: " + error.message);
       }

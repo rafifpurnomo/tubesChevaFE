@@ -127,15 +127,15 @@
   border-radius: 10px;
 }
 
-.status-sudah {
+.status-kategori-sudah {
   background-color: green;
 }
 
-.status-belum {
+.status-kategori-belum {
   background-color: #b32b2b;
 }
 
-.status-null{
+.status-kategori-null{
   background-color: transparent;
 }
 

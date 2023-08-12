@@ -11,11 +11,11 @@ import NotFound from "../NotFound/NotFound";
 
 function renderStatusClass(status) {
   if (status === "sudah") {
-    return "status-sudah";
+    return "status-kategori-sudah";
   } else if (status === "belum") {
-    return "status-belum";
+    return "status-kategori-belum";
   } else if (status === null) {
-    return "status-null";
+    return "status-kategori-null";
   }
   return "";
 }

@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import Footer from "../footer/Footer";
 import Navbar from "../Navbar/Navbar";
+import Swal from "sweetalert2";
 
 function DetailPengeluaran() {
   const [title, setTitle] = useState("");
@@ -13,7 +14,7 @@ function DetailPengeluaran() {
 
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className="addIconPengeluaranContainer">
         <p className="addIconPengeluaranJudul">
           <a href="/admin">Homepage / </a>
@@ -75,18 +76,17 @@ function DetailPengeluaran() {
         <a href="/Pengeluaran">
           <button className="hapusPengeluaran">Batalkan</button>
         </a>
-        <a href="">
-          <button
-            className="tambahkanPengeluaran"
-            onClick={(e) => {
-              addDataPengeluaran(title, waktu, nominal, deskripsi);
-            }}
-          >
-            tambahkan
-          </button>
-        </a>
+
+        <button
+          className="tambahkanPengeluaran"
+          onClick={(e) => {
+            addDataPengeluaran(title, waktu, nominal, deskripsi);
+          }}
+        >
+          tambahkan
+        </button>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
@@ -108,12 +108,23 @@ function addDataPengeluaran(title, waktu, nominal, deskripsi) {
       }
     )
     .then((response) => {
-      alert(response.data["message"]);
-      window.location.assign("/Pengeluaran");
+      Swal.fire({
+        title: "Succes!",
+        text: "data berhasil di tambahkan",
+        icon: "success",
+        confirmButtonText: "kembali ke beranda",
+      }).then(function () {
+        window.location = "/Pengeluaran";
+      });
     })
     .catch((error) => {
       if (error.response && error.response.status === 400) {
-        alert("Data belum terisi!");
+        Swal.fire({
+          title: "Error!",
+          text: "data belum terisi",
+          icon: "error",
+          confirmButtonText: "lanjutkan",
+        });
       } else {
         alert("Error: " + error.message);
       }

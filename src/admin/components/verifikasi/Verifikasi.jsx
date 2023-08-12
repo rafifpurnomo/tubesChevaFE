@@ -4,13 +4,14 @@ import Footer from "../footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import "./Verifikasi.css";
 import { Icon } from "@iconify/react";
+import NotFound from "../NotFound/NotFound";
 
 function renderStatusClass(status) {
-  if (status === "sudah terverifikasi") {
+  if (status === "verifikasi di terima") {
     return "status-sudah";
   } else if (status === "belum terverifikasi") {
     return "status-belum";
-  } else if (status === "data di tolak") {
+  } else if (status === "verifikasi di tolak") {
     return "status-ditolak";
   } else if (status === null) {
     return "status-null";
@@ -33,7 +34,6 @@ function Verifikasi() {
       .then((response) => {
         setData(response.data);
         setShowData(response.data.slice(0, 5));
-        console.log(response)
       })
       .catch((error) => {
         console.error(error);
@@ -89,7 +89,9 @@ function Verifikasi() {
           </div>
         ))
       ) : (
-        <p>Loading...</p>
+        <div>
+          <NotFound />
+        </div>
       )}
       <div className="paginationInfo">
         <p>Page: {page + 1}</p>
