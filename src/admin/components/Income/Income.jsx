@@ -4,6 +4,7 @@ import DetailIncome from "../DetailIncome/DetailIncome";
 import Footer from "../footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import "./Income.css";
+import NotFound from "../NotFound/NotFound";
 
 function Income() {
   var [data, setData] = useState([]);
@@ -53,7 +54,9 @@ const ListBulan=(props)=>{
             </div>
           ))
         ) : (
-          <p>Loading...</p>
+          <div>
+            <NotFound/>
+          </div>
         )}
       </div>
       <Footer/>

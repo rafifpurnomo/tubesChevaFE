@@ -38,10 +38,12 @@ function LoginPage() {
             setRole("admin");
             localStorage.setItem("isLoggedIn", "true");
             localStorage.setItem("userRole", "admin");
+            localStorage.setItem("nim", nim)
           } else if (role === "mahasiswa") {
             setRole("mahasiswa");
             localStorage.setItem("isLoggedIn", "true");
             localStorage.setItem("userRole", "mahasiswa");
+            localStorage.setItem("nim", nim)
           } else {
             setRole("");
             setLoggedIn(false)

@@ -1,6 +1,5 @@
 import React from "react";
 import "./DetailUser.css";
-import { Icon } from "@iconify/react";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";

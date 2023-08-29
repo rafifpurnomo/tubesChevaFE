@@ -56,38 +56,39 @@ function Verifikasi() {
         </p>
       </div>
       {showData.length > 0 ? (
-        showData.map((kategori, index) => (
-          <div key={index} className="containerVerifikasi">
-            <div className="tampilanDataVerifikasi">
-              <img
-                src={kategori.image}
-                alt="bukti transaksi"
-                className="gambarVerifikasi"
-              />
-
-              <div className="nameDescDate">
-                <p className="namaDataVerifikasi">{kategori.nama}</p>
-                <p className="tanggalVerifikasi">{kategori.tanggal}</p>
-                <p className="descVerifikasi">{kategori.deskripsi}</p>
-                <p className="nominalVerifikasi">rp. {kategori.nominal}</p>
+        showData.map((kategori, index) => {
+          return (
+            <div key={index} className="containerVerifikasi">
+              <div className="tampilanDataVerifikasi">
+                <img
+                  src={"http://localhost:3000/"+kategori.image}
+                  alt="bukti transaksi"
+                  className="gambarVerifikasi"
+                />
+                <div className="nameDescDate">
+                  <p className="namaDataVerifikasi">{kategori.nama}</p>
+                  <p className="tanggalVerifikasi">{kategori.tanggal}</p>
+                  <p className="descVerifikasi">{kategori.deskripsi}</p>
+                  <p className="nominalVerifikasi">rp. {kategori.nominal}</p>
+                </div>
+                <div
+                  className={`statusVerifikasi ${renderStatusClass(
+                    kategori.status
+                  )}`}
+                >
+                  {kategori.status}
+                </div>
               </div>
-              <div
-                className={`statusVerifikasi ${renderStatusClass(
-                  kategori.status
-                )}`}
-              >
-                {kategori.status}
+              <div className="ctaEditDelKategori">
+                <a href={"DetailVerifikasi/" + index}>
+                  <button className="ctaEditKategori">
+                    <Icon icon="bx:edit" />
+                  </button>
+                </a>
               </div>
             </div>
-            <div className="ctaEditDelKategori">
-              <a href={"DetailVerifikasi/" + index}>
-                <button className="ctaEditKategori">
-                  <Icon icon="bx:edit" />
-                </button>
-              </a>
-            </div>
-          </div>
-        ))
+          );
+        })
       ) : (
         <div>
           <NotFound />

@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.css";
-import { Icon } from "@iconify/react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../footer/Footer";
 

@@ -38,7 +38,6 @@ function DetailVerifikasi() {
       })
       .then((response) => {
         setDataVerifikasi(response.data);
-        console.log(response);
       })
       .catch((error) => {
         console.error(error);
@@ -46,6 +45,7 @@ function DetailVerifikasi() {
   }, []);
   useEffect(() => {
     if (dataVerifikasi.length > 0) {
+      console.log(data.image)
       setData(dataVerifikasi[index]);
       setImage(data.image);
       setNama(data.nama);
@@ -75,7 +75,7 @@ function DetailVerifikasi() {
       <div className="containerDetailVerifikasi">
         <div className="buktiPembayaran">
           <img
-            src="/asset/contohGambar.png"
+            src={"http://localhost:3000/"+image}
             alt="Bukti Pembayaran"
             className="FotoBuktiPembayaran"
           />

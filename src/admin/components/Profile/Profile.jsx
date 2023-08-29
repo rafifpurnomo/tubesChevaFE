@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
-import LoginPage from "../../../loginPage/LoginPage";
+import React, { useEffect, useState } from "react";
 import Footer from "../footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import "./Profile.css";
+import Swal from "sweetalert2";
 
 function Profile() {
   const [loggedIn, setLoggedIn] = useState(
@@ -11,13 +10,23 @@ function Profile() {
   );
 
   const logout = () => {
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("userRole");
-    setLoggedIn(false);
+    Swal.fire({
+      title: "Logout",
+      text: "Apakah Anda yakin ingin logout?",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonText: "Ya, logout",
+      cancelButtonText: "Tidak",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("userRole");
+        localStorage.removeItem("nim")
+        setLoggedIn(false);
+        window.location = "/";
+      }
+    });
   };
-  if (loggedIn === false) {
-    return <Navigate to="/" replace={true} />;
-  }
   return (
     <>
       <Navbar />
@@ -45,7 +54,9 @@ function Profile() {
         </div>
       </div>
       <div className="adminLogoutCTA">
-        <button className="backAdminCta">kembali</button>
+        <a href="/admin">
+          <button className="backAdminCta">kembali</button>
+        </a>
         <button className="logoutAdminCTA" onClick={logout}>
           logout
         </button>

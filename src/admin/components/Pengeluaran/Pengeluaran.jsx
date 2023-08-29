@@ -52,38 +52,44 @@ function Pengeluaran() {
         </a>
       </div>
       <div className="containerTampilan">
-        {showData.map((kategori, index) => {
-          return (
-            <div className="tampilanDataPengeluaran" key={index}>
-              <div className="detailPengeluaranNominalTitle">
-                <div className="nominalTitlePengeluaran">
-                  <span>{kategori.title}</span>
-                  <span className="nominalPengeluaran">
-                    Rp. {kategori.nominal}
-                  </span>
+        {showData.length > 0 ? (
+          showData.map((kategori, index) => {
+            return (
+              <div className="tampilanDataPengeluaran" key={index}>
+                <div className="detailPengeluaranNominalTitle">
+                  <div className="nominalTitlePengeluaran">
+                    <span>{kategori.title}</span>
+                    <span className="nominalPengeluaran">
+                      Rp. {kategori.nominal}
+                    </span>
+                  </div>
+                  <div className="tanggalPengeluaran">
+                    <span>{kategori.waktu}</span>
+                  </div>
                 </div>
-                <div className="tanggalPengeluaran">
-                  <span>{kategori.waktu}</span>
-                </div>
-              </div>
-              <div className="ctaEditDelPengeluaran">
-                <a href={"/DetailPengeluaran/" + index}>
-                  <button className="ctaEditPengeluaran">
-                    <Icon icon="bx:edit" />
+                <div className="ctaEditDelPengeluaran">
+                  <a href={"/DetailPengeluaran/" + index}>
+                    <button className="ctaEditPengeluaran">
+                      <Icon icon="bx:edit" />
+                    </button>
+                  </a>
+                  <button
+                    className="ctaDelPengeluaran"
+                    onClick={(e) => {
+                      hapusDataPengeluaran(index);
+                    }}
+                  >
+                    <Icon icon="material-symbols:delete-outline" />
                   </button>
-                </a>
-                <button
-                  className="ctaDelPengeluaran"
-                  onClick={(e) => {
-                    hapusDataPengeluaran(index);
-                  }}
-                >
-                  <Icon icon="material-symbols:delete-outline" />
-                </button>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })
+        ) : (
+          <div>
+            <NotFound/>
+          </div>
+        )}
       </div>
       <div className="paginationInfo">
         <p>Page: {page + 1}</p>
